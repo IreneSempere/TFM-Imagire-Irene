@@ -1,0 +1,999 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Roboto,sans-serif;
+    background-color: white;
+    /*color:#166D75;*/
+    color: #444242;
+}
+h1, h2, h3{
+    color: #40BBC6;
+}
+
+.contenidoPag{ /* Establece un ancho fijo para el contenido */
+    width: 1200px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    z-index: 1;
+}
+.respmenu{ /*menu hamburguesa*/
+    display: none;
+}
+#mapa_peq{/*oculta el mapa del responsive*/
+    display: none;
+}
+
+/********************************************************
+*                    * AVISO COOKIES *                  *
+*********************************************************/
+
+.avisoCookies{
+    height: 9em;
+    width: 40%;
+    background-color: white;
+    position:fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: 0 0 90px rgba(0,0,0,0.57);
+    padding:2em 4em 0 4em;
+    margin: 20% auto auto;
+    line-height : 25px;
+    overflow: scroll;
+    z-index: 2;
+    overflow: hidden;
+}
+#tituloAvisoCookies{
+    font-size: 1.3em;
+    text-align: center;
+    margin-bottom: 0.3em;
+}
+#infoCookies{
+    font-size: 1em;
+    text-align: center;
+}
+#aceptarCookies{
+    float: right;
+    border: none;
+    background-color: #40BBC6;
+    padding: 1% 4% 1% 4%;
+    color: white;
+}
+#aceptarCookies:hover{
+    background-color: #85e2e4;
+    color: #444242;
+    cursor: pointer;
+}
+
+/********************************************************
+*              * PAGINA POLITICA COOKIES *              *
+*********************************************************/
+
+.section_politica_cookies {
+    background-color: white;
+    border-radius: 10px;
+    padding:2em 4em 5em 4em;
+}
+.h2cookies{
+    text-align: left;
+    margin: 3em 0 1em 0;
+}
+.h3cookies{
+    margin: 1em 0 0.5em 0;
+}
+
+/********************************************************
+*                  * CABECERA Y MENU *                  *
+*********************************************************/
+#container{
+    background-color: white;
+}
+.cabecera{
+    text-align: center;
+}
+.menu ul{
+    text-align: center;
+    margin:0;
+    background-color: white;
+    opacity: 90%;
+}
+.menu ul div{
+    display:inline-block;
+    padding:1%;
+    border-radius: 8px;
+}
+a{
+    color: #444242;
+    text-decoration: none;
+}
+.menu ul li{
+    list-style: none
+}
+.menu ul div:hover {
+    background-color:#40BBC6;
+    color: white;
+}
+
+/* Barra de búsqueda del menú */
+
+.search-box:hover {
+  	background-color: white !important;
+}
+
+.search-input {
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  background-color: #eaeaeb;
+  color: #6c6c6c;
+  border-radius: 6px;
+  border:none;
+  transition: all .4s;
+}
+
+.search-input:focus {
+  border:none;
+  outline:none;
+  box-shadow: 0 1px 12px #b8c6db;
+  -moz-box-shadow: 0 1px 12px #b8c6db;
+  -webkit-box-shadow: 0 1px 12px #b8c6db;
+}
+
+/********************************************************
+*                      * INDEX *                        *
+*********************************************************/
+
+/* -------------------- SLIDER -------------------------*/
+.slider {
+    background-image: url("../img/slider/costa.jpg");
+    background-position: center top;
+    background-size: 100% auto;
+    width: 100%;
+    height: 50em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.slider .fa-arrow-right {
+    cursor: pointer;
+    color: white;
+    font-size: xxx-large;
+    margin-inline: 40px;
+}
+.slider .fa-arrow-right:hover{
+    opacity: 50%;
+}
+.slider .fa-arrow-left {
+    cursor: pointer;
+    color: white;
+    font-size: xxx-large;
+    margin-inline: 40px;
+}
+.slider .fa-arrow-left:hover{
+    opacity: 50%;
+}
+
+/* ---------------------- CONTENT INDEX ----------------*/
+h1 {
+    text-align: center;
+}
+.descripcion_tienda{
+    text-align: center;
+    margin: 10px 0 50px 0;
+}
+.productos_index{
+    display: grid;
+}
+.circulo_enlace_productos{
+    background-image: url("../img/circulos/todos.jpg");
+    width: 220px;
+    height: 220px;
+    border-radius: 100%;
+    display: inline-block;
+}
+.productos_index a{
+	margin: auto;
+	align-items:center;
+}
+.titulo_circulos{
+    text-align: center;
+    margin-top: 1em;
+    color: #40BBC6;
+}
+.titulo_circulos:hover{
+    color: white;
+}
+.fondo_info_general{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin-top: 5em;
+    height: 130px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.164);
+}
+.info_general{
+    display: inline-block;
+    text-align: center;
+    margin-top: 2.3em;
+}
+.info_general i{
+    color: #40BBC6;
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+.foto_mesa{
+    background-image: url("../img/productos/mesario.jpg");
+    background-size: 100% auto;
+    height: 500px;
+    background-position: center;
+    margin-top: 5em;
+}
+.parrafo_index{
+    text-align: center;
+}
+.parrafo_descripcion{
+    display: grid;
+    grid-template-columns: repeat(2fr);
+}
+.link_sobremi{
+    text-align: center;
+    color: #40BBC6;
+}
+
+/********************************************************
+*              * PRODUCTOS Y OFERTAS *                  *
+*********************************************************/
+
+.tituloProductos{
+    text-align: center;
+}
+h1{
+    font-size: 1.7em;
+    margin: 3em 0 0 0;
+}
+p#textoProductos{
+	margin-top:2em;
+}
+#textoProductos{
+    background-color: #F4F1E0;
+    font-size: 1em;
+}
+.filtroProductos{
+	display:grid;
+	grid-template-columns: repeat(6,1fr);
+}
+div.circuloFiltroProductos{
+	margin:auto;
+	margin-top:4em;
+}
+.circuloFiltroProductos{
+    background-image: url("../img/circulos/todos.jpg");
+    background-position: center top;
+    background-size: 100% auto;
+    display: flex;
+	width:100px;
+	height:100px;
+    border-radius: 100%;
+    margin-top:5em;
+}
+.circuloFiltroProductosDioramas{
+    background-image: url("../img/productos/diorama.jpg");
+}
+.circuloFiltroProductosCuadros{
+    background-image: url("../img/productos/cuadro.jpg");
+}
+.circuloFiltroProductosJoyeria{
+    background-image: url("../img/productos/llaveros.jpg");
+}
+.circuloFiltroProductosMesas{
+    background-image: url("../img/productos/mesario.jpg");
+}
+.circuloFiltroProductosIlus{
+    background-image: url("../img/circulos/ilus.jpg");
+}
+.circuloFiltroProductos:hover{
+    box-shadow: 0 0 1em rgba(0,0,0,0.57);
+}
+.filtroProductos div h4{
+	color:#40BBC6;
+	text-align:center;
+	margin-top:1em;
+}
+.listaProductos{
+    margin: 3em 0 5em 0;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2em;
+}
+.cajaProducto{
+    background-color: #F4F1E0;
+    width: 100%;
+    height: 300px;
+}
+.cajaProducto img{
+    width: 100%;
+}
+.cajaProducto:hover{
+    box-shadow: 0 0 1em rgba(0,0,0,0.57);
+}
+.nombreProducto{
+    font-size: 1.1em;
+    margin: 1em 0 0 1em;
+    font-weight: bold;
+    display: block;
+}
+.descripcionProducto{
+    margin: 0.2em 0 0 1em;
+    display: inline-block;
+    vertical-align: top;
+}
+#OfertasPoliticaDevoluciones{
+    color: #40BBC6;
+}
+.precioOferta{
+    font-size: 1.2em;
+    display: inline;
+    color: #D85B3B;
+    font-weight: bold;
+    margin: 0 1em 0 0.9em;
+    float: right;
+}
+
+/********************************************************
+*                      * CONTACTO *                     *
+*********************************************************/
+
+/* ------------------ FORMULARIO ------------------------*/
+.body_contacto{
+    background-color: #40BBC6;
+}
+.section_contacto{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2em;
+}
+.formulario{
+    background-color: white;
+    padding: 4em 4em 0em 4em;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px -8px;
+}
+.formulario ul li {
+    list-style: none;
+}
+.form_container{
+    margin-top:1em;
+    display: grid;
+    gap:2em;
+}
+.form_group{
+    position: relative;
+}
+
+select{
+    margin:0.2em 0 1em 0;
+    padding: 8px 16px 8px 0;
+    font-size: 1em;
+}
+input{
+    width: 100%;
+    font-size: 1em;
+    padding: .6em;
+    margin-bottom: 1em;
+}
+label{
+    font-weight: bold;
+}
+label.gender{
+    font-weight: normal;
+}
+.selec_genero{
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+.genero{
+    width: auto;
+    margin: 0 1em 1em 0.2em;
+}
+.form_submit{
+    border: none;
+    background-color: #40BBC6;
+    color: white;
+    width: 8em;
+    padding:0.8em;
+}
+.form_submit:hover{
+    background-color: #75E4EE;
+    color: black;
+    cursor: pointer;
+}
+input#cbx_form{
+    width: auto !important;
+}
+.motivo_consulta{
+    font-weight: bold;
+}
+textarea{
+    width: 100%;
+    height: 5em;
+    display: inline-block;
+    margin-bottom: 1em;
+    font-size: 1em;
+    padding: 0.5em;
+    font-family: Roboto,sans-serif;
+}
+/* ------------------ UBICACION ------------------------*/
+h2{
+    text-align: center;
+    font-size: 1.6em;
+    margin-bottom:2em;
+}
+.ubicacion{
+    background-color: white;
+    padding: 4em;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px -8px;
+}
+.mapa{
+    margin:2em 0 0 0;
+}
+.texto_ubicacion{
+    margin-top:2em;
+}
+
+/********************************************************
+*            * INICIO SESIÓN ADMINISTRADOR *            *
+*********************************************************/
+
+/* ------------------ FORMULARIO ------------------------*/
+
+section.section_sesion_admin{
+	/*background-color: #75E4EE;*/
+	background-image: url("../img/slider/costa.jpg");
+    display: grid;
+    grid-template-columns:1fr;
+}
+.formulario_sesion_admin{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px -8px;
+}
+.formulario_sesion_admin ul li {
+    list-style: none;
+}
+.title_usuario{
+	font-size:1.8em;
+	text-decoration: underline;
+}
+form.formulario_sesion_admin{
+    width: 280px;
+    height:370px;
+    margin: auto;
+    margin-top: 7em;
+    margin-bottom: 7em;
+    z-index: 1;
+    padding:6em;
+}
+ul.form_usuario{
+	width:100%;
+	margin: auto;
+	text-align:center;
+}
+input#usuario, input#clave{	
+	margin:1.3em 0 1.3em 0;
+	color: #444242;
+	width: 91%;
+}
+label.texto_form_usuario{
+	font-size:1.2em;
+}
+.input_sesion{
+	margin-top:1em;
+	width:100%;
+	background-color: #444242;
+}
+.enlace_sesion{
+	color:#166D75;
+}
+.enlace_sesion:hover{
+	color: #444242;
+}
+.form_container{
+    margin-top:1em;
+    display: grid;
+    gap:2em;
+}
+.form_group{
+    position: relative;
+}
+
+select{
+    margin:0.2em 0 1em 0;
+    padding: 8px 16px 8px 0;
+    font-size: 1em;
+}
+input{
+    width: 100%;
+    font-size: 1em;
+    padding: .6em;
+    margin-bottom: 1em;
+}
+label{
+    font-weight: bold;
+}
+label.gender{
+    font-weight: normal;
+}
+.selec_genero{
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+.genero{
+    width: auto;
+    margin: 0 1em 1em 0.2em;
+}
+input#cbx_form{
+    width: auto !important;
+}
+.motivo_consulta{
+    font-weight: bold;
+}
+textarea{
+    width: 100%;
+    height: 5em;
+    display: inline-block;
+    margin-bottom: 1em;
+    font-size: 1em;
+    padding: 0.5em;
+    font-family: Roboto,sans-serif;
+}
+
+/********************************************************
+*                      * SOBRE MI *                     *
+*********************************************************/
+
+.sobre_mi{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em;
+    padding: 2em;
+    background-color:#FCFAF0;
+}
+.foto_sobre_mi img{
+    width: 550px;
+}
+.info_sobre_mi{
+    margin-top:4em;
+}
+.info_sobre_mi h3 {
+    margin-top: 1em;
+}
+.experiencia{
+    display: grid;
+    gap:1em;
+}
+.info_sobre_mi img{
+    width: 550px;
+    margin-top: 3.7em;
+}
+
+/********************************************************
+*                      * GESTIÓN TIENDA *               *
+*********************************************************/
+
+.BotonInsertarProducto input{
+	background-color:#97F68D;
+	display:inline;
+	width:10em;
+	border-color: transparent;
+}
+div.BotonInsertarProducto{
+	display:inline;
+}
+.BotonInsertarProducto input:hover{
+	opacity:50%;
+}
+.BotonEliminarProducto input:hover{
+	opacity:50%;
+}
+.BotonModificarProducto input:hover{
+	opacity:50%;
+}
+.superiorTabla th{
+	background-color:#989898;
+	padding:0.5em 1em 0.5em 1em;
+	color:black;
+}
+.inferiorTabla td{
+	background-color:#CBD7DA;
+	padding:0.5em 1em 0.5em 1em;
+	color:black;
+}
+.filtroGestionProductos div,.filtroGestionProductos h4{
+	width:6em;
+	display:inline;
+	background-color:#40BBC6;
+	padding:0.5em;
+	border:1em;
+}
+.filtroGestionProductos div:hover{
+	color:white;
+}
+.filtroGestionProductos{
+	margin:1em 0 1em 0;
+}
+.textoFiltrarProductos{
+	font-weight:bold;
+	margin-left:0.1em;
+	margin-top:1em;
+}
+i.fa-solid.fa-trash{
+	color: #D85B3B;
+}
+/********************************************************
+*                      * FOOTER *                       *
+*********************************************************/
+
+footer{
+    background-color: #40BBC6;
+    width: 100%;
+    height: 130px;
+}
+.contenidoFooter{
+    text-align: center;
+    font-weight: bold;
+}
+.contenidoFooter ul div{
+    display:inline-block;
+    margin:1.5em 1em 1em 1em;
+}
+.contenidoFooter ul li{
+    color: white;
+    list-style:none;
+}
+.textFooter{
+    color: white;
+    display:inline-block;
+    font-weight: normal;
+}
+footer a li:hover{
+    color: #444242;
+}
+
+
+/********************************************************
+*                    * RESPONSIVE *                     *
+*********************************************************/
+
+@media only screen and (max-width: 1920px) {
+    div.cabecera img{
+        width: 16em;
+    }
+    /*------ slider ------*/
+    .slider {
+        background-size: auto;
+        height: 30em;
+    }
+    .slider .fa-arrow-right {
+        font-size: 40px;
+        margin-inline: 40px;
+    }
+
+    .slider .fa-arrow-left {
+        font-size: 40px;
+        margin-inline: 40px;
+    }
+    .circulo_enlace_productos{
+	    background-image: url("../img/circulos/todos.jpg");
+	    width: 170px;
+	    height: 170px;
+	    border-radius: 100%;
+	    display: inline-block;
+	}
+    h1,h2{
+    	font-size:1.5em;
+    }
+    h3.titulo_circulos{
+   		font-size:1em;
+    }
+}
+
+@media only screen and (max-width: 1830px) { /* caso particular para arreglar problemas de visualización de ciertos elementos en este punto */
+    /*------- slider-------*/
+    .slider {
+        background-size: auto;
+        height: 30em;
+        }
+}
+@media only screen and (max-width: 1328px) { /*--------------- genérico portatil -----------------*/
+    /*general*/
+    h1{
+        font-size: 28px;
+    }
+    /*---- aviso cookies --*/
+    .avisoCookies{
+        height: 11em;
+    }
+    /*------ menu ----------*/
+    .menu ul div{
+        display:inline-block;
+        padding:1.5%;
+    }
+    /*------ slider --------*/
+    .slider {
+        background-size: auto;
+        height: 35em;
+    }
+}
+@media only screen and (max-width: 1200px) { /*--------------- caso particular para arreglar problemas de visualización de ciertos elementos en este punto -----------------*/
+    /*------- productos -----*/
+    .listaProductos{
+        margin: 0;
+        grid-template-columns: repeat(2,1fr);
+        padding: 5% 5% 5% 5%;
+    }
+    .cajaProducto{
+        height: 380px;
+        width: 500px;
+    }
+}
+
+@media only screen and (max-width: 960px) { /*--------------- genérico tablet -----------------*/
+
+    /*------- general ------*/
+    body{
+        font-size: 14px;
+    }
+    
+    .contenidoPag{ /* Establece un ancho fijo para el contenido */
+        width: 100%;
+    }
+    h1{
+        font-size: 23px;
+    }
+    
+    /*----- aviso cookies----*/
+    .avisoCookies{
+        height: 15em;
+        width: 50%;
+    }
+    #aceptarCookies{
+        padding: 2.3% 8% 2.3% 8%;
+        margin-top: 3%;
+    }
+
+    /*------ slider ---------*/
+    .slider {
+        background-size: auto;
+        height: 20em;
+    }
+    /* ------- index --------*/
+    .foto_mesa{
+        height: 300px;
+    }
+    .info {
+        padding:0 10% 0 10%;
+    }
+    .info div {
+        height: 80px;
+    }
+    .fa-recycle, .fa-pen, .fa-truck{
+        font-size: 1.5em;
+    }
+    .texto_info{
+        margin-top: 1em;
+    }
+
+    /*------- productos -----*/
+    .listaProductos{
+        margin: 0;
+        grid-template-columns: repeat(2,1fr);
+        padding: 5% 5% 5% 5%;
+    }
+    .cajaProducto{
+        height: 310px;
+        width: 100%;
+    }
+    /*-------- sobre mi ------*/
+    .sobre_mi{
+        margin: 10% 10% 10% 18%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 0;
+        width: 550px;
+    }
+    .foto_sobre_mi img{
+        display: none;
+    }
+    .info_sobre_mi{
+        margin-top: 1em;
+    }
+    .info_sobre_mi h3 {
+        margin-top: 1em;
+    }
+
+    /*-------- contacto---------*/
+    .section_contacto{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 2em;
+        padding: 5% 20% 5% 20%;
+    }
+    .form_submit{
+        width: 10em;
+        float: right;
+        margin-top: 3%;
+        margin-bottom: 0;
+    }
+
+    /*--------------- MENU HAMBURGUESA -------------*/
+    .menu{ 
+        display: none; /*oculta el menu normal*/
+    }
+    .cabecera img{
+        width: 12em;
+    }
+    .respmenu a {
+        position: relative;
+        color: inherit;
+        text-decoration: none;
+        display: block;
+        padding: 10px 20px;
+        border-bottom: none;
+        width: 100%;
+        background: white;
+        padding:1.2em 0 1.5em 0;
+        text-align: center;
+    }
+    .respmenu a:hover{
+        background-color:#00c5d3;
+        color: white;
+    }
+    #fondo_menuA, #fondo_menuB{
+        background: white;
+    }
+    #fondo_menuA:hover, #fondo_menuB:hover{
+        background:#00c5d3;
+    }
+    .respmenu li {
+        list-style: none;
+    }
+    .respmenu input[type="checkbox"], .respmenu .fa-bars, .respmenu .fa-times {
+        position: absolute;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        right: 0;
+        top: 0;
+        width: 48px;
+        height: 48px;
+    }
+    .respmenu .fa-bars, .respmenu .fa-times {
+        font-size: 20px; /*tamaño del icono hamburguesa*/
+        pointer-events: none;
+        margin: 20px 30px 0 0; /*margen del icono del menu hamburguesa*/
+    }
+    .respmenu input[type="checkbox"] {
+        opacity: 0;
+        margin: 20px 30px 0 0; /*margen del input "clic" del menu hamburguesa*/
+    }
+    .respmenu {
+        color: black;
+        position: relative;
+        min-height: 30px;
+        display: contents; 
+    }
+    .respmenu nav {
+        display: none;
+    }
+    .respmenu input:checked ~ nav {
+        display: block;
+    }
+    .respmenu input:checked ~ .fa-bars {
+        display: none;
+    }
+    .respmenu input:not(:checked) ~ .fa-times {
+        display: none;
+    }
+}
+ 
+@media only screen and (max-width: 480px) { /*--------------- movil -----------------*/
+    
+    /*------------ general -------------*/
+    h1{
+        font-size: 21px;
+    }
+    h2{
+        font-size: 20px;
+    }
+    footer{
+        height: 400px;
+        padding: 2em 0 2em 0;     
+    }
+    footer a {
+        display: block;
+    }
+
+    /*----- aviso cookies----*/
+    .avisoCookies{
+        height: 21em;
+        width: 48%;
+    }
+    #aceptarCookies{
+        padding: 4% 9% 4% 9%;
+        margin-top: 3%;
+    }
+    .slider{ 
+        display: none; /* oculta el slider */
+    }
+
+    /*------------ index -------------*/
+    .contenidoPag{
+        width: 100%;
+    }
+
+    aside{
+        width: 80%;
+        margin: auto;
+    }
+    .info{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    /*------------ productos -------------*/
+    .listaProductos{
+        grid-template-columns: repeat(1,1fr);
+    }
+    /*----------- sobre mi ---------------*/
+    .sobre_mi{
+        grid-template-columns: none;
+        margin: auto;
+        width:330px;
+    }
+    .sobre_mi img{
+        width: 330px;
+    }
+    /*----------- contacto ---------------*/
+
+    .formulario{
+        width: 360px;
+        margin-left: 26px;
+        padding: 2em;
+        height: 640px;
+    }
+    input{
+        height: 10px;
+    }
+    input, textarea{
+        width: 330px;
+    }
+    .section_contacto{
+        grid-template-columns: repeat(1,1fr);
+        padding: 0;
+        width: 320px;
+    }
+    .form_submit{
+        width: 10em;
+        margin-top: 3%;
+        margin-bottom: 0;
+        height: 40px;
+    }
+    .form_container{
+        width: 330px;
+    }
+    #mapa_gra{ /* oculta el mapa normal */
+        display: none;
+    }
+    #mapa_peq{ /* muestra el mapa responsive */
+        display: block;
+    }
+    div .ubicacion{
+        width: 300px;
+        margin-left: 26px;
+    }
+}
+
