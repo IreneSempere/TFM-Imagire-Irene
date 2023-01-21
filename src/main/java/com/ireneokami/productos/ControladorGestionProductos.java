@@ -120,7 +120,7 @@ public class ControladorGestionProductos extends HttpServlet {
 		obtenerProductos(request, response);
 
 	}
-
+//Hola que tal
 	private void cargarProductoPorID(HttpServletRequest request, HttpServletResponse response) throws Exception{
 		
 		// Leer el ID del artículo mediante el listado
