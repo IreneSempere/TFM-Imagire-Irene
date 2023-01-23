@@ -47,7 +47,7 @@
         <section class=contenidoPag>
 
 
-            <div class="fondo_info_general">
+            <section class="fondo_info_general">
                 <div class="info_general">
                     <i class="fa-sharp fa-solid fa-truck"></i>                        
                     <p>Envíos a toda España</p>
@@ -64,21 +64,27 @@
                     <i class="fa-solid fa-percent"></i>
                     <p>Puntos y descuentos</p>
                 </div>
-        	</div>
-                <div class="desripcionYfoto">
-                    <h1>ILUSTRACIONES POR ENCARGO Y PRODUCTOS ARTESANALES</h1>
-                    <aside><p class="descripcion_tienda">Todos nuestros productos son únicos y artesanales. Puedes realizar un encargo personalizado y hecho a medida</p></aside>
-                </div>
+        	</section>        	                
+                
+
+        </section>
+        	
+        	<section class="info_tienda">
+        		
+        		
+        	</section>
+
+            <!-- <div class="desripcionYfoto">
+                <h1>ILUSTRACIONES POR ENCARGO Y PRODUCTOS ARTESANALES</h1>
+                <aside><p class="descripcion_tienda">Todos nuestros productos son únicos y artesanales. Puedes realizar un encargo personalizado y hecho a medida</p></aside>
+            </div>
 
 	        <div class="productos_index">
 	             <a href="ControladorProductos"><div class="circulo_enlace_productos">
 	                 <h3 class="titulo_circulos">NUESTROS PRODUCTOS</h3>
 	             </div></a>
-	        </div>
-                
-                
+	        </div> -->
 
-        </section>
 
         <div class="foto_mesa"></div>
 

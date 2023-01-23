@@ -45,7 +45,8 @@
                 </h1> 
             </div>
 			
-			<form class="formularioModificarProducto" id="formularioModificarProducto" method="get" action="ControladorGestionProductos">
+			<section class="contenedor_formulario_gestion">
+				<form class="formularioModificarProducto" id="formularioModificarProducto" method="post" action="ControladorGestionProductos">
 				<input type="hidden" name="instruccion" value="actualizarBDyListar"> <!-- El parámetro instrucción/IDarticulo se utiliza para utilizar diferentes "paginas" o secciones dentro de una misma url -->
 				<input type="hidden" name="IDproducto" value="${productoModificar.id}">
 				
@@ -90,6 +91,8 @@
                     </div>
                 </div>
             </form>
+			</section>
+			
         </section>
 
     <!-- ------------------------- FOOTER ------------------------------ -->

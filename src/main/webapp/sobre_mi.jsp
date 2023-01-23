@@ -7,7 +7,7 @@
         <meta charset="UTF-8">
         <title>Irene Okami</title>
         <link rel="icon" href="img/logoimagire.png" sizes="any"><!-- 32×32 -->
-        <link rel="stylesheet" href="css/estilos.css">
+        <link rel="stylesheet" href="css/css.css">
         <script src="https://kit.fontawesome.com/716997629e.js" crossorigin="anonymous"></script>
         <script src="js/slider_index.js" type="text/javascript"></script>
     </head>

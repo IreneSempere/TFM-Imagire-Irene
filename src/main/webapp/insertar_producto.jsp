@@ -45,49 +45,52 @@
                 </h1> 
             </div>
 			
-			<form class="formularioInsertarProducto" id="formularioInsertarProducto" method="get" action="ControladorGestionProductos">
-				<input type="hidden" name="instruccion" value="insertarEnBD"> <!-- El parámetro instrucción se utiliza para utilizar diferentes "paginas" o secciones dentro de una misma url -->
-				
-                <div class="form_container">
-                    <div class="form_group">
-                        <ul>
-                        	<li>
-	                            <label for="tipo" >Tipo de producto</label>
-	                            <select id="labelTipoProducto" name="tipo_producto" form="formularioInsertarProducto">
-	                                <option value="Diorama">Diorama</option>
-	                                <option value="Cuadro">Cuadro</option>
-	                                <option value="Joyería">Joyería</option>
-	                                <option value="Mesa">Mesa</option>
-	                                <option value="Ilustracion">Ilustración</option>
-	                            </select>
-							</li>
-                            <li>
-                                <label for="nombre">Nombre del producto:</label>
-                                <input type="text" id="nombre" name="nombre_producto" placeholder="" required>
-                            </li>
-                            <li>                           
-                                <label for="descripcion">Descripción:</label>
-                                <input type="text" id="descripcion" name="descripcion_producto" placeholder="" required>
-                            </li>
-                            <li>                            
-                                <label for="precio">Precio:</label>
-                                <input type="text" id="precio" name="precio_producto" placeholder="" required>
-                            </li> 
-                            <li>                          
-                                <label for="oferta">Oferta:</label>
-                                <input type="text" id="oferta" name="oferta_producto" placeholder="">
-                            </li>  
-                            <li>                         
-                                <label for="stock">Stock:</label>
-                                <input type="text" id="stock" name="stock_producto" placeholder="" required>
-                            </li>
-							<li>
-								<input type="submit" class="form_submit" value="Añadir">
-							</li>
-                        </ul>
-                    </div>
-                </div>
-            </form>
+			<section class="contenedor_formulario_gestion">
+				<form class="formularioInsertarProducto" id="formularioInsertarProducto" method="post" action="ControladorGestionProductos">
+					<input type="hidden" name="instruccion" value="insertarEnBD"> <!-- El parámetro instrucción se utiliza para utilizar diferentes "paginas" o secciones dentro de una misma url -->
+					
+	                <div class="form_container">
+	                    <div class="form_group">
+	                        <ul>
+	                        	<li>
+		                            <label for="tipo" >Tipo de producto</label>
+		                            <select id="labelTipoProducto" name="tipo_producto" form="formularioInsertarProducto">
+		                                <option value="Diorama">Diorama</option>
+		                                <option value="Cuadro">Cuadro</option>
+		                                <option value="Joyería">Joyería</option>
+		                                <option value="Mesa">Mesa</option>
+		                                <option value="Ilustracion">Ilustración</option>
+		                            </select>
+								</li>
+	                            <li>
+	                                <label for="nombre">Nombre del producto:</label>
+	                                <input type="text" id="nombre" name="nombre_producto" placeholder="" required>
+	                            </li>
+	                            <li>                           
+	                                <label for="descripcion">Descripción:</label>
+	                                <input type="text" id="descripcion" name="descripcion_producto" placeholder="" required>
+	                            </li>
+	                            <li>                            
+	                                <label for="precio">Precio:</label>
+	                                <input type="text" id="precio" name="precio_producto" placeholder="" required>
+	                            </li> 
+	                            <li>                          
+	                                <label for="oferta">Oferta:</label>
+	                                <input type="text" id="oferta" name="oferta_producto" placeholder="">
+	                            </li>  
+	                            <li>                         
+	                                <label for="stock">Stock:</label>
+	                                <input type="text" id="stock" name="stock_producto" placeholder="" required>
+	                            </li>
+								<li>
+									<input type="submit" class="form_submit" value="Añadir">
+								</li>
+	                        </ul>
+	                    </div>
+	                </div>
+	            </form>
+			</section>
+			
         </section>
 
     <!-- ------------------------- FOOTER ------------------------------ -->

@@ -86,6 +86,54 @@ public class ControladorGestionProductos extends HttpServlet {
 		}
 	}
 
+	
+	@Override
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		// Leer el parámetro del formulario
+		String parametroFormInsercion=request.getParameter("instruccion");	//insertarEnBD (crear un producto), (eliminar uno), modificar uno, listar todos
+		
+		// Si no se envía el parámetro, listar productos
+		if(parametroFormInsercion==null) parametroFormInsercion="listar";
+		
+		// Redirigir el flujo de ejecución al método adecuado
+		switch(parametroFormInsercion) {
+		
+		case "listar":
+			obtenerProductos(request, response);
+			break;
+		case "insertarEnBD":
+			insertarProducto(request, response);
+			break;
+		case "cargarPorID":
+			try {
+				cargarProductoPorID(request,response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			break;
+		case "actualizarBDyListar":
+			try {
+				actualizarProducto(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			break;
+			
+		case "eliminarPorID":
+			try {
+				eliminarProducto(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			break;
+		default:
+			obtenerProductos(request, response);
+			
+		}
+	}
+	
+	
 	private void eliminarProducto(HttpServletRequest request, HttpServletResponse response) throws Exception{
 		
 		// Leer id del producto a eliminar
@@ -120,7 +168,7 @@ public class ControladorGestionProductos extends HttpServlet {
 		obtenerProductos(request, response);
 
 	}
-//Hola que tal
+	
 	private void cargarProductoPorID(HttpServletRequest request, HttpServletResponse response) throws Exception{
 		
 		// Leer el ID del artículo mediante el listado
