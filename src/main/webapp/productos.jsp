@@ -43,21 +43,14 @@
         </div>
          
     <!-- ------------------------- CONTENIDO PRODUCTOS ------------------------------ -->
-
-        <section class="contenidoPag">
-
-       
-            <div class="tituloProductos">
-                <h1>
-                    TODOS LOS PRODUCTOS
-                </h1>
+    
+		<section class="contenedor_filtro">
+		
                 <aside><p id="textoProductos">
                     Aquí encontrarás diferentes productos en stock con envío 24/48h. Recuerda que puedes realizar un pedido personalizado.<br>
                     El tiempo de envío de los pedidos personalizados varía según el tiempo de fabricación de los mismos.
                 </p></aside>
-            </div>
-            
-            <div class="filtroProductos">
+			<div class="filtroProductos">
             	<a href="ControladorProductosCliente" class="link_pag">
 	            	<div>
 		            	<div class="circuloFiltroProductos">
@@ -101,6 +94,19 @@
 	                </div>
                 </a>
             </div>
+		</section>
+		
+            
+        <section class="contenidoPag">
+			
+       
+            <div class="tituloProductos">
+                <h1>
+                    TODOS LOS PRODUCTOS
+                </h1>
+            </div>
+            
+            
             
      
 
@@ -113,7 +119,7 @@
                         <img alt="imagen de un collar en oferta" src="${producto.pathImg}">
                         <div class="nombreProducto">
 							<c:set var="precioDosDecimales"><fmt:formatNumber type="number" minFractionDigits="2" maxFractionDigits="2" value="${producto.precio}" /></c:set>
-                            <div class="precioOferta"> ${precioDosDecimales}€</div>
+                            <div class="precioProducto"> ${precioDosDecimales}€</div>
                             <p>
                                  ${producto.nombre} 
                             </p>

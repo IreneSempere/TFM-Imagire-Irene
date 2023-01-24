@@ -8,7 +8,7 @@
 }
 body{
     font-family: Dosis,sans-serif;
-    background-color: white;
+    background-color: #F0EEE8;
     color: #444242;    
 }
 h1, h2{
@@ -183,10 +183,18 @@ a{
 }
 
 /* ---------------------- CONTENT INDEX ----------------*/
+.contenedor_info_general{
+    height: 130px;    
+    background-color: white; 
+    width:100%;
+}
 .fondo_info_general{
+	max-width:1200px;
     display: grid;
     grid-template-columns: repeat(4,1fr);
     height: 130px;
+    background-color: white;
+    margin:auto;
 }
 .info_general{
     display: inline-block;
@@ -250,20 +258,24 @@ a{
 .tituloProductos{
     text-align: center;
 }
-p#textoProductos{
-	margin-top:2em;
-}
 #textoProductos{
-    background-color: #F4F1E0;
     font-size: 1em;
+    text-align:center;
+    margin-bottom:2em;
+}
+.contenedor_filtro{
+	background-color: white;
+	padding:2em;
+	margin-bottom:3em;
 }
 .filtroProductos{
+	max-width:1200px;
+	margin:auto;
 	display:grid;
 	grid-template-columns: repeat(6,1fr);
 }
 div.circuloFiltroProductos{
 	margin:auto;
-	margin-top:4em;
 }
 .circuloFiltroProductos{
     background-image: url("../img/circulos/todos.jpg");
@@ -277,18 +289,53 @@ div.circuloFiltroProductos{
 }
 .circuloFiltroProductosDioramas{
     background-image: url("../img/productos/diorama.jpg");
+    background-repeat:no-repeat;
+    background-image: fixed;
+	background-image: center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 .circuloFiltroProductosCuadros{
     background-image: url("../img/productos/cuadro.jpg");
+    background-repeat:no-repeat;
+    background-image: fixed;
+	background-image: center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 .circuloFiltroProductosJoyeria{
     background-image: url("../img/productos/llaveros.jpg");
+    background-repeat:no-repeat;
+    background-image: fixed;
+	background-image: center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 .circuloFiltroProductosMesas{
     background-image: url("../img/productos/mesario.jpg");
+    background-repeat:no-repeat;
+    background-image: fixed;
+	background-image: center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 .circuloFiltroProductosIlus{
     background-image: url("../img/circulos/ilus.jpg");
+    background-repeat:no-repeat;
+    background-image: fixed;
+	background-image: center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 .circuloFiltroProductos:hover{
     box-shadow: 0 0 1em rgba(0,0,0,0.57);
@@ -305,7 +352,7 @@ div.circuloFiltroProductos{
     gap: 2em;
 }
 .cajaProducto{
-    background-color: #F4F1E0;
+    background-color: white;
     width: 100%;
     height: 300px;
 }
@@ -329,7 +376,17 @@ div.circuloFiltroProductos{
 #OfertasPoliticaDevoluciones{
     color: #40BBC6;
 }
+.precioProducto{
+    font-family: Raleway,sans-serif;
+    font-size: 1.2em;
+    display: inline;
+    color: #444242;
+    font-weight: bold;
+    margin: 0 1em 0 0.9em;
+    float: right;
+}
 .precioOferta{
+    font-family: Raleway,sans-serif;
     font-size: 1.2em;
     display: inline;
     color: #D85B3B;
@@ -641,29 +698,30 @@ i.fa-solid.fa-trash{
 *********************************************************/
 
 footer{
-    background-color: #40BBC6;
+    background-color: white;
     width: 100%;
     height: 130px;
+    padding-top: 0.5em;
 }
 .contenidoFooter{
     text-align: center;
     font-weight: bold;
 }
 .contenidoFooter ul div{
-    display:inline-block;
-    margin:1.5em 1em 1em 1em;
+    display: inline-block;
+    margin: 1.5em 1em 1em 1em;
 }
 .contenidoFooter ul li{
-    color: white;
+    color: #444242;
     list-style:none;
 }
 .textFooter{
-    color: white;
+    color: #444242;
     display:inline-block;
     font-weight: normal;
 }
 footer a li:hover{
-    color: #444242;
+    color: #40BBC6;
 }
 
 

@@ -44,10 +44,8 @@
 
     <!-- ------------------------- CONTENIDO INDEX ------------------------------- -->
 
-        <section class=contenidoPag>
-
-
-            <section class="fondo_info_general">
+		<section class="contenedor_info_general">
+			<section class="fondo_info_general">
                 <div class="info_general">
                     <i class="fa-sharp fa-solid fa-truck"></i>                        
                     <p>Envíos a toda España</p>
@@ -64,11 +62,11 @@
                     <i class="fa-solid fa-percent"></i>
                     <p>Ofertas y descuentos</p>
                 </div>
-        	</section>        	                
-                
-
-        </section>
+        	</section> 
+		</section>
+            
         	
+    	
        	<section class="info_tienda">
        		<h1>TIENDA DE PRODUCTOS ARTESANALES</h1>
        		<p class="parrafo_info_tienda">¡Bienvenido/a a nuestra pequeña tienda de artesanía!</p>
