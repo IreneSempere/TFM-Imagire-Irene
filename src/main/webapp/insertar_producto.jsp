@@ -82,6 +82,10 @@
 	                                <label for="stock">Stock:</label>
 	                                <input type="text" id="stock" name="stock_producto" placeholder="" required>
 	                            </li>
+	                            <li>
+	                            	<label for="img">Sube una foto del producto:</label>
+            						<input type="file" id="img" name="foto_producto" />
+            					</li>
 								<li>
 									<input type="submit" class="form_submit" value="Añadir">
 								</li>

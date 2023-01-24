@@ -1,22 +1,27 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Dosis:wght@300;400;500;700&display=swap');
+
+
 *{
 	margin:0;
-	padding:0;
 }
 body{
-    font-family: Roboto,sans-serif;
+    font-family: Dosis,sans-serif;
     background-color: white;
-    /*color:#166D75;*/
+    color: #444242;    
+}
+h1, h2{
     color: #444242;
+    text-align: center;
+    font-family: Roboto,sans-serif;
+    font-weight:500;
 }
-h1, h2, h3{
-    color: #40BBC6;
-}
+
 
 .contenidoPag{ /* Establece un ancho fijo para el contenido */
     width: 1200px;
     margin: auto;
-    z-index: 1;
 }
 .respmenu{ /*menu hamburguesa*/
     display: none;
@@ -110,7 +115,8 @@ a{
     text-decoration: none;
 }
 .menu ul li{
-    list-style: none
+    list-style: none;
+    font-family: Roboto,sans-serif;
 }
 .menu ul div:hover {
     background-color:#40BBC6;
@@ -177,40 +183,10 @@ a{
 }
 
 /* ---------------------- CONTENT INDEX ----------------*/
-h1 {
-    text-align: center;
-}
-.descripcion_tienda{
-    text-align: center;
-    margin: 10px 0 50px 0;
-}
-.productos_index{
-    display: grid;
-}
-.circulo_enlace_productos{
-    background-image: url("../img/circulos/todos.jpg");
-    width: 220px;
-    height: 220px;
-    border-radius: 100%;
-    display: inline-block;
-}
-.productos_index a{
-	margin: auto;
-	align-items:center;
-}
-.titulo_circulos{
-    text-align: center;
-    margin-top: 1em;
-    color: #40BBC6;
-}
-.titulo_circulos:hover{
-    color: white;
-}
 .fondo_info_general{
     display: grid;
     grid-template-columns: repeat(4,1fr);
     height: 130px;
-   /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.164);*/
 }
 .info_general{
     display: inline-block;
@@ -222,16 +198,38 @@ h1 {
     font-size: 1.5em;
     margin-bottom: 0.5em;
 }
+.circulos_index{
+	width:13em;
+	height:13em;
+	display:block;
+	margin:auto;
+	border-radius:50%;
+}
+.texto_productos_index{
+	text-align:center;
+	margin-top:1em;
+}
 .info_tienda{
-	background-color:#E3E0D6;
+	background-color:#F0EEE8;
 	height:400px;
+	padding:4em 0 4em 0;
+}
+.contenido_info_tienda{
+	padding-top:4em;
+	width: 1200px;
+    margin: auto;
+	display:grid;
+	grid-template-columns:1fr 1fr 1fr;
+	gap:3em;
+}
+.parrafo_info_tienda{
+	text-align:center;
 }
 .foto_mesa{
     background-image: url("../img/productos/mesario.jpg");
     background-size: 100% auto;
     height: 500px;
     background-position: center;
-    margin-top: 5em;
 }
 .parrafo_index{
     text-align: center;
@@ -251,10 +249,6 @@ h1 {
 
 .tituloProductos{
     text-align: center;
-}
-h1{
-    font-size: 1.7em;
-    margin: 3em 0 0 0;
 }
 p#textoProductos{
 	margin-top:2em;
@@ -350,7 +344,7 @@ div.circuloFiltroProductos{
 
 /* ------------------ FORMULARIO ------------------------*/
 .body_contacto{
-    background-color: #40BBC6;
+    background-color: #E3E0D6;
 }
 .section_contacto{
     display: grid;

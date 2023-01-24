@@ -7,6 +7,7 @@ import java.util.List;
 import javax.annotation.Resource;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -16,6 +17,8 @@ import javax.sql.DataSource;
 /**
  * Servlet implementation class ControladorProductos
  */
+
+@MultipartConfig
 @WebServlet("/ControladorGestionProductos")
 public class ControladorGestionProductos extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -195,7 +198,9 @@ public class ControladorGestionProductos extends HttpServlet {
 		float precioProducto=Float.parseFloat(request.getParameter("precio_producto"));
 		float ofertaProducto=Float.parseFloat(request.getParameter("oferta_producto"));
 		int stockProducto=Integer.parseInt(request.getParameter("stock_producto"));
-		String pathImgProducto=request.getParameter("img_producto");
+		//Guardar imagen en carpeta de servidor
+		guardarImagenEnServidor(request);
+//		String pathImgProducto=request.getParameter("foto_producto");
 			
 		// Crear un objeto de tipo producto
 		Producto nuevoProducto= new Producto(nombreProducto, descripcionProducto, precioProducto, ofertaProducto, stockProducto, tipoProducto, pathImgProducto);
@@ -211,6 +216,12 @@ public class ControladorGestionProductos extends HttpServlet {
 		obtenerProductos(request, response);
 	}
 	
+	private boolean guardarImagenEnServidor(HttpServletRequest request) {
+		//obtener imagen de la request
+		//guardar imagen en carpeta del server
+		//devolver path de la imagen para guardarla en base de datos
+	}
+
 	private void obtenerProductos(HttpServletRequest request, HttpServletResponse response) {
 		
 		List<Producto> productos;

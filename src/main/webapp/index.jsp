@@ -62,29 +62,32 @@
                 </div>
                 <div class="info_general">
                     <i class="fa-solid fa-percent"></i>
-                    <p>Puntos y descuentos</p>
+                    <p>Ofertas y descuentos</p>
                 </div>
         	</section>        	                
                 
 
         </section>
         	
-        	<section class="info_tienda">
-        		
-        		
-        	</section>
-
-            <!-- <div class="desripcionYfoto">
-                <h1>ILUSTRACIONES POR ENCARGO Y PRODUCTOS ARTESANALES</h1>
-                <aside><p class="descripcion_tienda">Todos nuestros productos son únicos y artesanales. Puedes realizar un encargo personalizado y hecho a medida</p></aside>
-            </div>
-
-	        <div class="productos_index">
-	             <a href="ControladorProductos"><div class="circulo_enlace_productos">
-	                 <h3 class="titulo_circulos">NUESTROS PRODUCTOS</h3>
-	             </div></a>
-	        </div> -->
-
+       	<section class="info_tienda">
+       		<h1>TIENDA DE PRODUCTOS ARTESANALES</h1>
+       		<p class="parrafo_info_tienda">¡Bienvenido/a a nuestra pequeña tienda de artesanía!</p>
+       		<section class="contenido_info_tienda">
+       			<div>
+       				<a href="productos.jsp"><img src="img/diorama.jpg" alt="imagen de un producto artesanal" class="circulos_index"></a>
+       				<p class="texto_productos_index">Aquí podrás encontrar diferentes productos<br> en stock de decoración y joyería artesanal</p>
+       			</div>
+       			<div>
+       				<a href="contacto.jsp"><img src="img/handmade.jpg" alt="imagen de una persona trabajando manualmente" class="circulos_index"></a>
+       				<p class="texto_productos_index">Si prefieres hacernos un pedido personalizado<br> y/o hecho a medida, contacta con nosotros</p>
+       			</div>   
+       			<div>
+       				<a href="ofertas.jsp"><img src="img/offer.jpg" alt="imagen de un cartel de ofertas" class="circulos_index"></a>
+       				<p class="texto_productos_index">No olvides que tenemos ofertas por tiempo<br> limitado o hasta fin de stock</p>
+       			</div>    			
+       		</section>
+       		
+       	</section>
 
         <div class="foto_mesa"></div>
 
