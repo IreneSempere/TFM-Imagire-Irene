@@ -94,7 +94,7 @@ h1, h2{
 *                  * CABECERA Y MENU *                  *
 *********************************************************/
 #container{
-    background-color: white;
+    background-color: #282828;
 }
 .cabecera{
     text-align: center;
@@ -102,16 +102,15 @@ h1, h2{
 .menu ul{
     text-align: center;
     margin:0;
-    background-color: white;
-    opacity: 90%;
+    background-color: #282828;
 }
 .menu ul div{
     display:inline-block;
-    padding:1%;
+    padding:1em;
     border-radius: 8px;
 }
 a{
-    color: #444242;
+    color: white;
     text-decoration: none;
 }
 .menu ul li{
@@ -120,18 +119,18 @@ a{
 }
 .menu ul div:hover {
     background-color:#40BBC6;
-    color: white;
+    color: #282828;
 }
 
 /* Barra de búsqueda del menú */
 
 .search-box:hover {
-  	background-color: white !important;
+  	background-color: #282828 !important;
 }
 
 .search-input {
   width: 100%;
-  font-family: 'Montserrat', sans-serif;
+  font-family: Roboto, sans-serif;
   font-size: 16px;
   background-color: #eaeaeb;
   color: #6c6c6c;
@@ -196,6 +195,9 @@ a{
     background-color: white;
     margin:auto;
 }
+.texto_info_general{
+	font-size:18px;
+}
 .info_general{
     display: inline-block;
     text-align: center;
@@ -216,6 +218,7 @@ a{
 .texto_productos_index{
 	text-align:center;
 	margin-top:1em;
+	font-size:18px;
 }
 .info_tienda{
 	background-color:#F0EEE8;
@@ -232,6 +235,7 @@ a{
 }
 .parrafo_info_tienda{
 	text-align:center;
+	font-size:18px;
 }
 .foto_mesa{
     background-image: url("../img/productos/mesario.jpg");
@@ -239,16 +243,28 @@ a{
     height: 500px;
     background-position: center;
 }
-.parrafo_index{
-    text-align: center;
-}
+
 .parrafo_descripcion{
     display: grid;
-    grid-template-columns: repeat(2fr);
+    grid-template-columns: 1fr 1fr;
+    gap:3em;
+    margin-bottom:4em;
 }
-.link_sobremi{
-    text-align: center;
-    color: #40BBC6;
+.img_sobre_mi{
+	width:100%;
+}
+.titulo_sobre_mi{
+	margin-top:4em;
+}
+.h4_sobre_mi{
+	font-size:18px;
+}
+.parrafo_index{
+	font-size:18px;
+	margin:1em 0 19px 0;
+}
+.foto_inspiracion{
+	width:100%;
 }
 
 /********************************************************
@@ -605,35 +621,6 @@ textarea{
 }
 
 /********************************************************
-*                      * SOBRE MI *                     *
-*********************************************************/
-
-.sobre_mi{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2em;
-    padding: 2em;
-    background-color:#FCFAF0;
-}
-.foto_sobre_mi img{
-    width: 550px;
-}
-.info_sobre_mi{
-    margin-top:4em;
-}
-.info_sobre_mi h3 {
-    margin-top: 1em;
-}
-.experiencia{
-    display: grid;
-    gap:1em;
-}
-.info_sobre_mi img{
-    width: 550px;
-    margin-top: 3.7em;
-}
-
-/********************************************************
 *                      * GESTIÓN TIENDA *               *
 *********************************************************/
 
@@ -731,7 +718,6 @@ footer a li:hover{
 
 @media only screen and (max-width: 1920px) {
     div.cabecera img{
-        width: 16em;
     }
     /*------ slider ------*/
     .slider {
@@ -941,7 +927,7 @@ footer a li:hover{
         margin: 20px 30px 0 0; /*margen del input "clic" del menu hamburguesa*/
     }
     .respmenu {
-        color: black;
+        color: white;
         position: relative;
         min-height: 30px;
         display: contents; 

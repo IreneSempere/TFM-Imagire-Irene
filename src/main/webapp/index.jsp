@@ -48,19 +48,19 @@
 			<section class="fondo_info_general">
                 <div class="info_general">
                     <i class="fa-sharp fa-solid fa-truck"></i>                        
-                    <p>Envíos a toda España</p>
+                    <p class="texto_info_general">Envíos a toda España</p>
                 </div>
                 <div class="info_general">
                     <i class="fa-solid fa-pen-ruler"></i>                       
-                    <p>Pedidos personalizados</p>
+                    <p class="texto_info_general">Pedidos personalizados</p>
                 </div>
                 <div class="info_general">
                     <i class="fa-solid fa-clock"></i>                      
-                    <p>Artesanía de stock limitado</p>
+                    <p class="texto_info_general">Artesanía de stock limitado</p>
                 </div>
                 <div class="info_general">
                     <i class="fa-solid fa-percent"></i>
-                    <p>Ofertas y descuentos</p>
+                    <p class="texto_info_general">Ofertas y descuentos</p>
                 </div>
         	</section> 
 		</section>
@@ -90,22 +90,27 @@
         <div class="foto_mesa"></div>
 
         <section class="contenidoPag">
-            <div class="parrafo_descripcion">
-                <div>
-                    <h2>
-                        Mucho más que una tienda de artesanía
-                    </h2>
-                    <p class="parrafo_index">
-                        Me llamo Irene, y además de artista, soy una apasionada de la fantasía y naturaleza.<br>
-    
-                        En cada rincón de mi ser siempre ha habido un pedacito de naturaleza buscando la forma de salir. <br>Así nació esta pequeña tienda artesanal, una forma de que todos
-                        puedan disfrutar de ese trocito de su ser <br>que siempre ha estado dentro de ellos pero que quieren sentir y sostener en sus propias manos.<br>
-                        <div class="link_sobremi">
-                            <a href="sobre_mi.html" class="link_pag"><h5>Más de mí </h5><i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    </p>
-                </div>
-            </div>
+            <h2 class="titulo_sobre_mi">
+               Mucho más que una tienda de artesanía
+            </h2>
+            <section class="parrafo_descripcion">
+				<img src="img/sobre_mi.jpg" alt="imagen de una chica trabajando" class="img_sobre_mi">
+				<section>
+					<h3 class="h4_sobre_mi">Un poco sobre mí y el origen de la tienda</h3>
+					<p class="parrafo_index">
+	                    Me llamo Irene, y además de artista, soy una apasionada de la fantasía y naturaleza.<br>
+	
+	                    En un rincón dentro de mí siempre ha habido algo de naturaleza buscando la forma de salir. Así nació esta pequeña tienda artesanal.<br>
+	                </p>
+	                <h3 class="h4_sobre_mi2">Mi inspiración</h3>
+	                <p class="parrafo_index">
+	                   Desde niña he disfrutado de los paisajes, los animales y la fantasía detras de todos aquellos libros y películas que tanto amaba. Quiero que la gente como yo pueda
+	                   sentir que tiene una pequeña parte de esos mundos en su hogar.
+	                </p>
+	                <img src="img/sobremi/inspire.jpg" alt="imagen de un pájaro volando" class="foto_inspiracion">
+				</section>
+                
+            </section>
         </section>
 
         <!-- ------------------------- FOOTER ------------------------------ -->
