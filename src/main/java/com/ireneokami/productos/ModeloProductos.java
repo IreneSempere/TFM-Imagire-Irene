@@ -116,7 +116,7 @@ public class ModeloProductos {
 	}
 	
 	//Añadir producto a la BD
-	public void insertarNuevoProducto(Producto nuevoProducto) throws SQLException {
+	public void insertarNuevoProductoEnBBDD(Producto nuevoProducto) throws SQLException {
 		
 		Connection conexionBD=null;
 		PreparedStatement preparedStatement = null;

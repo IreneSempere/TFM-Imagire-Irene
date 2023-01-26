@@ -42,7 +42,7 @@
             
             
             <div class="tituloProductos">
-                <h1>
+                <h1 class="titulo_gestion">
                     GESTIÓN DE PRODUCTOS
                 </h1> 
             </div>
