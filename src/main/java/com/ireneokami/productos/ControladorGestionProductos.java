@@ -217,6 +217,7 @@ public class ControladorGestionProductos extends HttpServlet {
 		int stockProducto=Integer.parseInt(request.getParameter("stock_producto"));
 		//Guardar imagen en carpeta de servidor
 		String rutaYnombreImagen = "C:\\Users\\irene\\eclipse-workspace\\TFMservlets\\src\\main\\webapp\\img\\" + nombreProducto + ".png";
+		String fileName = this.getServletContext().getRealPath("/img/" + nombreProducto + ".png");
 		boolean imagenGuardada = guardarImagenEnServidor(request, rutaYnombreImagen);
 //		String pathImgProducto=request.getParameter("foto_producto");
 		
@@ -250,10 +251,10 @@ public class ControladorGestionProductos extends HttpServlet {
 		boolean ok=false;
 		
 		//obtener imagen de la request
-		if (request.getPart("foto_producto").getSize() > 0) { //getSize es el número de bytes del parametro foto_producto. Será 0 si está vacío
+		if (request.getParameter("foto_producto").length() > 0) { //getSize es el número de bytes del parametro foto_producto. Será 0 si está vacío
             //Comprobamos que el archivo sea tipo imagen y además menor a el tamaño establecido
-            if (request.getPart("foto_producto").getContentType().contains("image") == true
-                && request.getPart("foto_producto").getSize() < 8388608) { 
+            if (/*request.getParameter("foto_producto").contains("image") == true
+                &&*/ request.getParameter("foto_producto").length() < 8388608) { 
             	
             	//Obtenemos el nombre de la imagen y la ruta absoluta del sistema donde queremos guardar la imagen
 //                String rutaYnombreImagen = this.getServletContext().getRealPath("C:\\Users\\irene\\eclipse-workspace\\TFMservlets\\src\\main\\webapp\\img" + nombreImagen);

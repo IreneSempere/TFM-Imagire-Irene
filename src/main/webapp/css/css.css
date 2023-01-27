@@ -9,13 +9,13 @@
 body{
     font-family: Dosis,sans-serif;
     background-color: #F0EEE8;
-    color: #444242;    
+    color: black;    
 }
 h1, h2{
-    color: #444242;
     text-align: center;
     font-family: Roboto,sans-serif;
     font-weight:500;
+    font-size: 28px;
 }
 .contenidoPag{ /* Establece un ancho fijo para el contenido */
     width: 1200px;
@@ -27,7 +27,9 @@ h1, h2{
 #mapa_peq{/*oculta el mapa del responsive*/
     display: none;
 }
-
+ul{
+	padding:0;
+}
 /********************************************************
 *                    * AVISO COOKIES *                  *
 *********************************************************/
@@ -67,7 +69,7 @@ h1, h2{
 }
 #aceptarCookies:hover{
     background-color: #85e2e4;
-    color: #444242;
+    color: #282828;
     cursor: pointer;
 }
 
@@ -122,6 +124,9 @@ a{
 
 /* Barra de búsqueda del menú */
 
+.search-box{
+	margin-right:1em;
+}
 .search-box:hover {
   	background-color: #282828 !important;
 }
@@ -265,112 +270,6 @@ a{
 	width:100%;
 }
 
-/* SLIDE INFERIOR */
-
-.slide {
-    position: relative;
-    margin-top: 26px;
-}
-.slide-inner {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    height: calc( 300px + 3em);
-}
-.slide-open:checked + .slide-item {
-   /* position: static;*/
-    opacity: 100;
-}
-.slide-item {
-    position: absolute;
-    opacity: 0;
-    -webkit-transition: opacity 0.6s ease-out;
-    transition: opacity 0.6s ease-out;
-}
-.slide-item img {
-    display: block;
-    height: auto;
-    max-width: 100%;
-}
-.slide-control {
-    background: rgba(0, 0, 0, 0.28);
-    border-radius: 50%;
-    color: #fff;
-    cursor: pointer;
-    display: none;
-    font-size: 40px;
-    height: 40px;
-    line-height: 35px;
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translate(0, -50%);
-    cursor: pointer;
-    -ms-transform: translate(0, -50%);
-    transform: translate(0, -50%);
-    text-align: center;
-    width: 40px;
-    z-index: 10;
-}
-.slide-control.prev {
-    left: 2%;
-}
-.slide-control.next {
-    right: 2%;
-}
-.slide-control:hover {
-    background: rgba(0, 0, 0, 0.8);
-    color: #aaaaaa;
-}
-#slide-1:checked ~ .control-1,
-#slide-2:checked ~ .control-2,
-#slide-3:checked ~ .control-3 {
-    display: block;
-}
-.slide-indicador {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    bottom: 2%;
-    left: 0;
-    right: 0;
-    text-align: center;
-    z-index: 10;
-}
-.slide-indicador li {
-    display: inline-block;
-    margin: 0 5px;
-}
-.slide-circulo {
-    color: #828282;
-    cursor: pointer;
-    display: block;
-    font-size: 35px;
-}
-.slide-circulo:hover {
-    color: #aaaaaa;
-}
-#slide-1:checked ~ .control-1 ~ .slide-indicador 
-     li:nth-child(1) .slide-circulo,
-#slide-2:checked ~ .control-2 ~ .slide-indicador 
-      li:nth-child(2) .slide-circulo,
-#slide-3:checked ~ .control-3 ~ .slide-indicador 
-      li:nth-child(3) .slide-circulo {
-    color: #428bca;
-}
-#titulo {
-    width: 100%;
-    position: absolute;
-    padding: 0px;
-    margin: 0px auto;
-    text-align: center;
-    font-size: 27px;
-    color: rgba(255, 255, 255, 1);
-    font-family: 'Open Sans', sans-serif;
-    z-index: 9999;
-    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), 
-         -1px 0px 2px rgba(255, 255, 255, 0);
-}
 /********************************************************
 *              * PRODUCTOS Y OFERTAS *                  *
 *********************************************************/
@@ -381,11 +280,10 @@ a{
 #textoProductos{
     font-size: 1em;
     text-align:center;
-    margin-bottom:2em;
 }
 .contenedor_filtro{
 	background-color: white;
-	padding:2em;
+	padding:1.5em;
 	margin-bottom:3em;
 }
 .filtroProductos{
@@ -461,9 +359,9 @@ div.circuloFiltroProductos{
     box-shadow: 0 0 1em rgba(0,0,0,0.57);
 }
 .filtroProductos div h4{
-	color:#40BBC6;
+	color:#282828;
 	text-align:center;
-	margin-top:1em;
+	margin:1em 0 2em 0;
 }
 .listaProductos{
     margin: 3em 0 5em 0;
@@ -483,7 +381,7 @@ div.circuloFiltroProductos{
     box-shadow: 0 0 1em rgba(0,0,0,0.57);
 }
 .nombreProducto{
-	color:#444242;
+	color:#282828;
     font-size: 1.1em;
     margin: 1em 0 0 1em;
     font-weight: bold;
@@ -494,7 +392,7 @@ div.circuloFiltroProductos{
     margin: 0.2em 0 0 1em;
     display: inline-block;
     vertical-align: top;
-    color:#444242;
+    color:#282828;
     font-family: Roboto,sans-serif;
 }
 #OfertasPoliticaDevoluciones{
@@ -504,7 +402,7 @@ div.circuloFiltroProductos{
     font-family: Raleway,sans-serif;
     font-size: 1.2em;
     display: inline;
-    color: #444242;
+    color: #282828;
     font-weight: bold;
     margin: 0 1em 0 0.9em;
     float: right;
@@ -518,7 +416,11 @@ div.circuloFiltroProductos{
     margin: 0 1em 0 0.9em;
     float: right;
 }
-
+.descripcion_ofertas{
+	background-color:white;
+	padding:1.5em;
+	margin-bottom:3em;
+}
 /********************************************************
 *                      * CONTACTO *                     *
 *********************************************************/
@@ -531,6 +433,7 @@ div.circuloFiltroProductos{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     gap: 2em;
+    margin: 6em 0 5em 0;
 }
 .formulario{
     background-color: white;
@@ -558,8 +461,8 @@ select{
 input{
     width: 100%;
     font-size: 1em;
-    padding: .6em;
     margin-bottom: 1em;
+    padding:0.5em;
 }
 label{
     font-weight: bold;
@@ -595,7 +498,7 @@ input#cbx_form{
 }
 textarea{
     width: 100%;
-    height: 5em;
+    height: 8em;
     display: inline-block;
     margin-bottom: 1em;
     font-size: 1em;
@@ -610,7 +513,7 @@ h2{
 }
 .ubicacion{
     background-color: white;
-    padding: 4em;
+    padding: 4em 4em 1em 4em;
     border-radius: 10px;
     box-shadow: 0 5px 15px -8px;
 }
@@ -618,7 +521,7 @@ h2{
     margin:2em 0 0 0;
 }
 .texto_ubicacion{
-    margin-top:2em;
+    margin-top:1em;
 }
 
 /********************************************************
@@ -626,17 +529,13 @@ h2{
 *********************************************************/
 
 /* ------------------ FORMULARIO ------------------------*/
-.titulo_gestion{
-	margin-top:4em;
-}
-.tablaProductos{
-	margin-bottom:6em;
-}
+
 section.section_sesion_admin{
-	/*background-color: #75E4EE;*/
 	background-image: url("../img/slider/costa.jpg");
-    display: grid;
-    grid-template-columns:1fr;
+    background-position: center top;
+    background-size: 100% auto;
+    display: flex;
+	width:100%;
 }
 .formulario_sesion_admin{
     background-color: white;
@@ -648,7 +547,6 @@ section.section_sesion_admin{
 }
 .title_usuario{
 	font-size:1.8em;
-	text-decoration: underline;
 }
 form.formulario_sesion_admin{
     width: 280px;
@@ -656,7 +554,6 @@ form.formulario_sesion_admin{
     margin: auto;
     margin-top: 7em;
     margin-bottom: 7em;
-    z-index: 1;
     padding:6em;
 }
 ul.form_usuario{
@@ -666,7 +563,7 @@ ul.form_usuario{
 }
 input#usuario, input#clave{	
 	margin:1.3em 0 1.3em 0;
-	color: #444242;
+	color: #282828;
 	width: 91%;
 }
 label.texto_form_usuario{
@@ -675,13 +572,13 @@ label.texto_form_usuario{
 .input_sesion{
 	margin-top:1em;
 	width:100%;
-	background-color: #444242;
+	background-color: #282828;
 }
 .enlace_sesion{
-	color:#166D75;
+	color:#282828;
 }
 .enlace_sesion:hover{
-	color: #444242;
+	color: gray;
 }
 .form_container{
     margin-top:1em;
@@ -700,7 +597,6 @@ select{
 input{
     width: 100%;
     font-size: 1em;
-    padding: .6em;
     margin-bottom: 1em;
 }
 label{
@@ -736,7 +632,20 @@ textarea{
 /********************************************************
 *                      * GESTIÓN TIENDA *               *
 *********************************************************/
-
+.fondoGestion{
+	padding-top:4em;
+}
+.tablaProductos{
+	margin-bottom:5em;
+    font-family: Roboto,sans-serif;
+}
+.filtro_e_inserción{
+	display:grid;
+	grid-template-columns:1.5fr 1fr;
+	max-width:1200px;
+	border:2px solid #F0EEE8;	
+    font-family: Roboto,sans-serif;
+}
 li{
 	list-style: none;
 }
@@ -746,21 +655,21 @@ li{
 }
 .BotonInsertarProducto input{
 	background-color:#97F68D;
-	display:inline;
 	width:10em;
 	border-color: transparent;
+	float: right;
 }
-div.BotonInsertarProducto{
-	display:inline;
+.section_BotonInsertarProducto{
+	padding-top:2em;
 }
 .BotonInsertarProducto input:hover{
 	opacity:50%;
 }
-.BotonEliminarProducto input:hover{
-	opacity:50%;
+.modificar_producto a{
+	color: #282828;
 }
-.BotonModificarProducto input:hover{
-	opacity:50%;
+.modificar_producto a:hover{
+	color:white;
 }
 .superiorTabla th{
 	background-color:#989898;
@@ -773,14 +682,18 @@ div.BotonInsertarProducto{
 	color:black;
 }
 .filtroGestionProductos div,.filtroGestionProductos h4{
+	color:black;
 	width:6em;
 	display:inline;
 	background-color:#40BBC6;
 	padding:0.5em;
 	border:1em;
 }
-.filtroGestionProductos div:hover{
+.filtroGestionProductos div,.filtroGestionProductos h4:hover{
 	color:white;
+}
+.filtroGestionProductos div:hover{
+	color: white;
 }
 .filtroGestionProductos{
 	margin:1em 0 1em 0;
@@ -791,7 +704,10 @@ div.BotonInsertarProducto{
 	margin-top:1em;
 }
 i.fa-solid.fa-trash{
-	color: #D85B3B;
+	color: #282828;
+}
+i.fa-solid.fa-trash:hover{
+	color: white;
 }
 /********************************************************
 *                      * FOOTER *                       *
@@ -812,11 +728,11 @@ footer{
     margin: 1.5em 1em 1em 1em;
 }
 .contenidoFooter ul li{
-    color: #444242;
+    color: #282828;
     list-style:none;
 }
 .textFooter{
-    color: #444242;
+    color: #282828;
     display:inline-block;
     font-weight: normal;
 }
@@ -830,12 +746,11 @@ footer a li:hover{
 *********************************************************/
 
 @media only screen and (max-width: 1920px) {
-    div.cabecera img{
-    }
+
     /*------ slider ------*/
     .slider {
         background-size: auto;
-        height: 30em;
+        height: 32em;
     }
     .slider .fa-arrow-right {
         font-size: 40px;

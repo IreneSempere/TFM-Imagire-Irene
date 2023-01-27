@@ -44,16 +44,13 @@
          
     <!-- ------------------------- CONTENIDO PRODUCTOS ------------------------------ -->
 
-        <section class="contenidoPag">
             
-            <div class="tituloProductos">
-                <h1>
-                    OFERTAS
-                </h1>
-                <aside><p id="textoProductos">
-                    Aquí encontrarás nuestros productos en oferta. <br>Recuerda que las ofertas son por tiempo limitado o hasta agotar el stock.<br>               
-                </p></aside>
-            </div>
+        <aside class="descripcion_ofertas"><p id="textoProductos">
+            Aquí encontrarás nuestros productos en oferta. <br>Recuerda que las ofertas son por tiempo limitado o hasta agotar el stock.<br>               
+        </p></aside>
+        
+        <section class="contenidoPag">
+        
             
             <div class="filtroProductos">
             	<a href="ControladorOfertas" class="link_pag">
@@ -100,6 +97,11 @@
                 </a>
             </div>
       
+      
+            <h1  class="tituloProductos">
+                PRODUCTOS EN OFERTA
+            </h1>
+            
 			
             <section class="listaProductos">
             

@@ -44,12 +44,16 @@
          
     <!-- ------------------------- CONTENIDO PRODUCTOS ------------------------------ -->
     
-		<section class="contenedor_filtro">
-		
+		<section class="contenedor_filtro">		
                 <aside><p id="textoProductos">
                     Aquí encontrarás diferentes productos en stock con envío 24/48h. Recuerda que puedes realizar un pedido personalizado.<br>
                     El tiempo de envío de los pedidos personalizados varía según el tiempo de fabricación de los mismos.
-                </p></aside>
+                </p></aside>			
+		</section>
+		
+  
+        <section class="contenidoPag">
+			
 			<div class="filtroProductos">
             	<a href="ControladorProductosCliente" class="link_pag">
 	            	<div>
@@ -94,11 +98,6 @@
 	                </div>
                 </a>
             </div>
-		</section>
-		
-            
-        <section class="contenidoPag">
-			
        
             <div class="tituloProductos">
                 <h1>
@@ -106,10 +105,6 @@
                 </h1>
             </div>
             
-            
-            
-     
-
             <section class="listaProductos">
             
 			<c:forEach var="producto" items="${LISTA_PRODUCTOS}">
