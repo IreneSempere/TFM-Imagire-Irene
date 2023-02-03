@@ -119,7 +119,7 @@ a{
 }
 .menu ul div:hover {
     background-color:#40BBC6;
-    color: #282828;
+    color: white;
 }
 
 /* Barra de búsqueda del menú */
@@ -185,6 +185,7 @@ a{
 }
 
 /* ---------------------- CONTENT INDEX ----------------*/
+
 .contenedor_info_general{
     height: 130px;    
     background-color: white; 
@@ -659,11 +660,12 @@ li{
 	border-color: transparent;
 	float: right;
 }
+.BotonInsertarProducto input:hover{
+	background-color:white;
+	cursor: pointer;
+}
 .section_BotonInsertarProducto{
 	padding-top:2em;
-}
-.BotonInsertarProducto input:hover{
-	opacity:50%;
 }
 .modificar_producto a{
 	color: #282828;
@@ -718,6 +720,7 @@ footer{
     width: 100%;
     height: 130px;
     padding-top: 0.5em;
+    font-family: Roboto,sans-serif;
 }
 .contenidoFooter{
     text-align: center;
@@ -784,23 +787,86 @@ footer a li:hover{
         }
 }
 @media only screen and (max-width: 1328px) { /*--------------- genérico portatil -----------------*/
-    /*general*/
-    h1{
-        font-size: 28px;
+    /*--general--*/
+    body{
+    	font-size:14px;
     }
+    h1,h2{
+        font-size: 24px;
+    } 
     /*---- aviso cookies --*/
     .avisoCookies{
         height: 11em;
     }
     /*------ menu ----------*/
+    .cabecera img{
+    	width: 15em;
+    }
     .menu ul div{
         display:inline-block;
     }
+    .search-input {
+	    font-size: 14px;
+	}
+    /*---------- INDEX -------------*/
     /*------ slider --------*/
     .slider {
         background-size: auto;
-        height: 35em;
+        height: 28em;
     }
+    .slider .fa-arrow-right {
+	    font-size: xx-large;
+	}
+	.slider .fa-arrow-left {
+	    font-size: xx-large;
+	}
+    /*-- contenido index -- */
+    .fondo_info_general{
+		max-width:850px;
+	}
+	.texto_info_general {
+   	 	font-size: 16px;
+	}
+	.contenido_info_tienda {
+	    width: 850px;
+	}
+	.parrafo_info_tienda {
+	    font-size: 16px;
+	}
+	.texto_productos_index {
+	    font-size: 14.7px;
+	}
+	.circulos_index {
+	    width: 10em;
+	    height: 10em;
+	}
+	.info_tienda {
+	    height: 330px;
+	}
+	.contenidoPag {
+	    width: 850px;
+	}
+	.h4_sobre_mi{		
+	    font-size: 16px;
+	}
+	.parrafo_index {
+	    font-size: 16px;
+	}
+	.contenedor_img_inspire{
+		width: 100%;
+	    height: 220px;
+	    overflow: hidden;
+	    position: relative;
+	}
+	img.foto_inspiracion{
+		position: absolute;
+	    top: -93px;
+	    min-height: 100%;
+	    min-width: 100%;
+	}
+	.parrafo_descripcion{
+		margin-bottom:1em;
+	}
 }
 @media only screen and (max-width: 1200px) { /*--------------- caso particular para arreglar problemas de visualización de ciertos elementos en este punto -----------------*/
     /*------- productos -----*/

@@ -41,12 +41,11 @@ public class ControladorProductosCliente extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		obtenerProducto(request, response);
+		obtenerProductos(request, response);
 	}
+		
 
-	
-
-	private void obtenerProducto(HttpServletRequest request, HttpServletResponse response) {
+	private void obtenerProductos(HttpServletRequest request, HttpServletResponse response) {
 		
 		List<Producto> productos;
 				

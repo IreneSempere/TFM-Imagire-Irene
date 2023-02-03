@@ -111,7 +111,7 @@
 
                 <a href="#" class="link_pag">
                     <div class="cajaProducto">
-                        <img alt="imagen de un collar en oferta" src="${producto.pathImg}">
+                        <img alt="imagen de un producto en oferta" src="${producto.pathImg}">
                         <div class="nombreProducto">
 							<c:set var="precioDosDecimales"><fmt:formatNumber type="number" minFractionDigits="2" maxFractionDigits="2" value="${producto.precio}" /></c:set>
                             <div class="precioProducto"> ${precioDosDecimales}€</div>

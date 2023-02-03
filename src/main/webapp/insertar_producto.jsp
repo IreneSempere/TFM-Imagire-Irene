@@ -46,7 +46,7 @@
             </div>
 			
 			<section class="contenedor_formulario_gestion">
-				<form class="formularioInsertarProducto" id="formularioInsertarProducto" method="post" action="ControladorGestionProductos">
+				<form class="formularioInsertarProducto" id="formularioInsertarProducto" method="post" action="ControladorGestionProductos" enctype="multipart/form-data">
 					<input type="hidden" name="instruccion" value="insertarEnBD"> <!-- El parámetro instrucción se utiliza para utilizar diferentes "paginas" o secciones dentro de una misma url -->
 					
 	                <div class="form_container">

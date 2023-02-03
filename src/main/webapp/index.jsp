@@ -96,24 +96,24 @@
             <section class="parrafo_descripcion">
 				<img src="img/sobre_mi.jpg" alt="imagen de una chica trabajando" class="img_sobre_mi">
 				<section>
-					<h3 class="h4_sobre_mi">Un poco sobre mí y el origen de la tienda</h3>
+					<h4 class="h4_sobre_mi">Un poco sobre mí y el origen de la tienda</h4>
 					<p class="parrafo_index">
 	                    Me llamo Irene, y además de artista, soy una apasionada de la fantasía y naturaleza.<br>
 	
 	                    En un rincón dentro de mí siempre ha habido algo de naturaleza buscando la forma de salir. Así nació esta pequeña tienda artesanal.<br>
 	                </p>
-	                <h3 class="h4_sobre_mi2">Mi inspiración</h3>
+	                <h4 class="h4_sobre_mi">Mi inspiración</h4>
 	                <p class="parrafo_index">
 	                   Desde niña he disfrutado de los paisajes, los animales y la fantasía detras de todos aquellos libros y películas que tanto amaba. Quiero que la gente como yo pueda
 	                   sentir que tiene una pequeña parte de esos mundos en su hogar.
 	                </p>
-	                <img src="img/sobremi/inspire.jpg" alt="imagen de un pájaro volando" class="foto_inspiracion">
+	                <figure class="contenedor_img_inspire"><img src="img/sobremi/inspire.jpg" alt="imagen de un pájaro volando" class="foto_inspiracion"></figure>
 				</section>
                 
             </section>
         </section>
         
-        <h2 class="titulo_sobre_mi">
+        <h2 class="titulo_muestra_productos">
                Conoce algunos de nuestros productos artesanales
         </h2>
         
