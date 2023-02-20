@@ -1,4 +1,4 @@
-package com.ireneokami.productos;
+package com.imagire.vo;
 
 import java.util.Date;
 

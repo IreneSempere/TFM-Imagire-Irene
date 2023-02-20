@@ -1,4 +1,4 @@
-package com.ireneokami.productos;
+package com.imagire.controladores;
 
 import java.io.IOException;
 import java.util.List;
@@ -12,14 +12,17 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.sql.DataSource;
 
+import com.imagire.dao.ProductosDao;
+import com.imagire.vo.Producto;
+
 /**
  * Servlet implementation class ControladorProductos
  */
-@WebServlet("/ControladorProductosCliente")
-public class ControladorProductosCliente extends HttpServlet {
+@WebServlet("/ControladorOfertas")
+public class ControladorOfertas extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
-	private ModeloProductos modeloProductos;
+	private ProductosDao modeloProductos;
 	
 	@Resource(name="jdbc/imagirebd")
 	private DataSource miPool;
@@ -31,7 +34,7 @@ public class ControladorProductosCliente extends HttpServlet {
 		super.init();
 		
 		try {
-			modeloProductos=new ModeloProductos(miPool);
+			modeloProductos=new ProductosDao(miPool);
 		}catch(Exception e) {
 			throw new ServletException(e);
 		}
@@ -41,24 +44,24 @@ public class ControladorProductosCliente extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		obtenerProductos(request, response);
+		obtenerProducto(request, response);
 	}
-		
 
-	private void obtenerProductos(HttpServletRequest request, HttpServletResponse response) {
+	
+
+	private void obtenerProducto(HttpServletRequest request, HttpServletResponse response) {
 		
 		List<Producto> productos;
 				
 				try {			
 					// Obtener lista de productos desde el modelo
-					String tipoProducto = request.getParameter("tipo_producto");
-					productos= modeloProductos.getProductosByTipoProducto(tipoProducto);//el parametro tipo_producto se usa para filtrar los productos por su tipo
+					productos= modeloProductos.getProductosEnOfertaByTipoProducto(request.getParameter("tipo_producto"));//el parametro tipo_producto se usa para filtrar los productos por su tipo					
 					
 					// Agregar lista de productos al request
 					request.setAttribute("LISTA_PRODUCTOS", productos);
 					
 					// Enviar request a la página JSP
-					RequestDispatcher miDispatcher=request.getRequestDispatcher("/productos.jsp");
+					RequestDispatcher miDispatcher=request.getRequestDispatcher("/ofertas.jsp");
 					miDispatcher.forward(request, response);
 					
 				}catch(Exception e) {

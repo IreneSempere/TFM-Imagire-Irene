@@ -87,7 +87,9 @@
        		
        	</section>
 
-        <div class="foto_mesa"></div>
+        <section class="foto_mesa">
+        	<h3 class="texto_foto_mesa">si necesitas algo hecho a tu gusto o medida haznos un pedido personalizado</h3>
+        </section>
 
         <section class="contenidoPag">
             <h2 class="titulo_sobre_mi">

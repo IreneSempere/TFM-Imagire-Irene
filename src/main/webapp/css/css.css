@@ -242,12 +242,20 @@ a{
 	font-size:18px;
 }
 .foto_mesa{
-    background-image: url("../img/productos/mesario.jpg");
-    background-size: 100% auto;
-    height: 500px;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../img/productos/mesario.jpg"); /*Añade y oscurece la imagen de fondo del contenedor*/
+    text-align:center;
+    min-height: 210px;
     background-position: center;
+    background-attachment: fixed;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+  	padding-top:180px;
 }
-
+.texto_foto_mesa{
+	color: white;
+	font-size: 1.7em;
+	font-weight:200;
+}
 .parrafo_descripcion{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -532,10 +540,9 @@ h2{
 /* ------------------ FORMULARIO ------------------------*/
 
 section.section_sesion_admin{
+  	background-repeat: no-repeat;
 	background-image: url("../img/slider/costa.jpg");
-    background-position: center top;
     background-size: 100% auto;
-    display: flex;
 	width:100%;
 }
 .formulario_sesion_admin{
@@ -777,6 +784,18 @@ footer a li:hover{
     h3.titulo_circulos{
    		font-size:1em;
     }
+    
+   	/*---- iniciar sesion -----*/
+   	section.section_sesion_admin{
+   		height: 600px;
+   	}
+   	form.formulario_sesion_admin{
+   		margin-top: 0;
+   		margin-bottom: 0;
+   	}
+   	section.section_sesion_admin{
+   		padding: 3em 0 1em 0;
+   	}
 }
 
 @media only screen and (max-width: 1830px) { /* caso particular para arreglar problemas de visualización de ciertos elementos en este punto */
@@ -867,6 +886,47 @@ footer a li:hover{
 	.parrafo_descripcion{
 		margin-bottom:1em;
 	}
+	.foto_mesa{
+		min-height:140px;
+		padding-top:110px;
+	}
+	.texto_foto_mesa{
+		font-size: x-large;	
+	}
+	/*----productos-------*/
+	.cajaProducto{
+	    height: 250px;
+	}
+	/*----inicio sesion----*/
+	form.formulario_sesion_admin {
+	    height: 320px;
+	    margin-top: 2em;
+	    margin-bottom: 2em;
+	    padding: 3em;
+	}
+	section.section_sesion_admin {
+    	height: 460px;
+	}
+	.title_usuario{
+		margin-top:0.5em;
+		font-size:1.7em;
+	}
+	/*------contacto------*/
+	.section_contacto{
+		width:500px;
+		margin: auto;
+		padding: 4em 0 4em 0;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 2em;
+    }
+    .form_submit{
+        width: 10em;
+        float: right;
+    }
+    /*--gestion tienda---*/
+	
+    
 }
 @media only screen and (max-width: 1200px) { /*--------------- caso particular para arreglar problemas de visualización de ciertos elementos en este punto -----------------*/
     /*------- productos -----*/
@@ -937,24 +997,6 @@ footer a li:hover{
         height: 310px;
         width: 100%;
     }
-    /*-------- sobre mi ------*/
-    .sobre_mi{
-        margin: 10% 10% 10% 18%;
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        gap: 0;
-        width: 550px;
-    }
-    .foto_sobre_mi img{
-        display: none;
-    }
-    .info_sobre_mi{
-        margin-top: 1em;
-    }
-    .info_sobre_mi h3 {
-        margin-top: 1em;
-    }
-
     /*-------- contacto---------*/
     .section_contacto{
         display: grid;

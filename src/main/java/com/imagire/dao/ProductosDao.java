@@ -1,4 +1,4 @@
-package com.ireneokami.productos;
+package com.imagire.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -12,8 +12,10 @@ import java.util.List;
 import javax.annotation.Resource;
 import javax.sql.DataSource;
 
+import com.imagire.vo.Producto;
+
 //Esta clase se utiliza para realizar el CRUD de los productos de la BBDD
-public class ModeloProductos {
+public class ProductosDao {
 	
 	//extrae del context.xml los datos para poder acceder a la BBDD
 	@Resource(name="jdbc/imagirebd")
@@ -21,7 +23,7 @@ public class ModeloProductos {
 	
 	
 	
-	public ModeloProductos(DataSource miPool) {
+	public ProductosDao(DataSource miPool) {
 		
 		this.miPool=miPool;
 	}

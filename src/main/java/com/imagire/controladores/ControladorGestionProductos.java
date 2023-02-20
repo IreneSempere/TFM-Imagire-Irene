@@ -1,4 +1,4 @@
-package com.ireneokami.productos;
+package com.imagire.controladores;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -17,6 +17,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.sql.DataSource;
 
+import com.imagire.dao.ProductosDao;
+import com.imagire.vo.Producto;
+
 /**
  * Servlet implementation class ControladorProductos
  */
@@ -26,7 +29,7 @@ import javax.sql.DataSource;
 public class ControladorGestionProductos extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
-	private ModeloProductos modeloProductos;
+	private ProductosDao modeloProductos;
 	
 	@Resource(name="jdbc/imagirebd")
 	private DataSource miPool;
@@ -38,7 +41,7 @@ public class ControladorGestionProductos extends HttpServlet {
 		super.init();
 		
 		try {
-			modeloProductos=new ModeloProductos(miPool);
+			modeloProductos=new ProductosDao(miPool);
 		}catch(Exception e) {
 			throw new ServletException(e);
 		}
