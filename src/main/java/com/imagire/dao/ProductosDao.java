@@ -85,7 +85,7 @@ public class ProductosDao {
 		conexionBD=miPool.getConnection();
 			
 		//-----------crear sentencia sql-----------------
-		String instruccionSql="SELECT * FROM PRODUCTOS WHERE PRECIO_OFERTA IS NOT NULL";
+		String instruccionSql="SELECT * FROM PRODUCTOS WHERE PRECIO_OFERTA IS NOT NULL AND PRECIO_OFERTA >0.0";
 		if(filtroTipoProducto != null) {
 			instruccionSql+=" AND TIPO_PRODUCTO= '" + filtroTipoProducto + "'";
 		}
