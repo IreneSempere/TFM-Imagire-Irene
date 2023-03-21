@@ -242,7 +242,7 @@ a{
 	font-size:18px;
 }
 .foto_mesa{
-	background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../img/productos/mesario.jpg"); /*Añade y oscurece la imagen de fondo del contenedor*/
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/productos/mesario.jpg"); /*Añade y oscurece la imagen de fondo del contenedor*/
     text-align:center;
     min-height: 210px;
     background-position: center;
@@ -649,7 +649,7 @@ textarea{
 }
 .filtro_e_inserción{
 	display:grid;
-	grid-template-columns:1.5fr 1fr;
+	grid-template-columns:4fr 1fr;
 	max-width:1200px;
 	border:2px solid #F0EEE8;	
     font-family: Roboto,sans-serif;
@@ -666,6 +666,7 @@ li{
 	width:10em;
 	border-color: transparent;
 	float: right;
+	margin-top:1em;
 }
 .BotonInsertarProducto input:hover{
 	background-color:white;
@@ -920,13 +921,18 @@ footer a li:hover{
         grid-template-columns: repeat(1,1fr);
         gap: 2em;
     }
+    .formulario {
+	    padding: 4em 4em 2em 4em;
+	}
     .form_submit{
         width: 10em;
         float: right;
     }
-    /*--gestion tienda---*/
-	
     
+    /*----------- gestion -------------*/
+	.filtroGestionProductos div,.filtroGestionProductos h4{
+		line-height: 2.5em;
+	}
 }
 @media only screen and (max-width: 1200px) { /*--------------- caso particular para arreglar problemas de visualización de ciertos elementos en este punto -----------------*/
     /*------- productos -----*/
@@ -1004,6 +1010,9 @@ footer a li:hover{
         gap: 2em;
         padding: 5% 20% 5% 20%;
     }
+    .formulario {
+	    padding: 4em 4em 3em 4em;
+	}
     .form_submit{
         width: 10em;
         float: right;
@@ -1011,7 +1020,7 @@ footer a li:hover{
         margin-bottom: 0;
     }
 
-    /*--------------- MENU HAMBURGUESA -------------*/
+    /*--------------------- MENU HAMBURGUESA --------------------*/
     .menu{ 
         display: none; /*oculta el menu normal*/
     }
@@ -1020,7 +1029,7 @@ footer a li:hover{
     }
     .respmenu a {
         position: relative;
-        color: inherit;
+        color: black;
         text-decoration: none;
         display: block;
         padding: 10px 20px;
@@ -1032,7 +1041,7 @@ footer a li:hover{
     }
     .respmenu a:hover{
         background-color:#00c5d3;
-        color: white;
+        color: black;
     }
     #fondo_menuA, #fondo_menuB{
         background: white;
@@ -1080,8 +1089,20 @@ footer a li:hover{
     .respmenu input:not(:checked) ~ .fa-times {
         display: none;
     }
+
+	/*------------- index -------------*/
+	section.foto_mesa{
+		height: 10px;
+	}
+	/*-------- inicio sesion ----------*/
+	section.section_sesion_admin{
+	    background-size: cover;
+	}
+ 	/*----------- gestion -------------*/
+	.filtroGestionProductos div,.filtroGestionProductos h4{
+		line-height: 2.5em;
+	}
 }
- 
 @media only screen and (max-width: 480px) { /*--------------- movil -----------------*/
     
     /*------------ general -------------*/

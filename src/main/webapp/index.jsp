@@ -115,10 +115,6 @@
             </section>
         </section>
         
-        <h2 class="titulo_muestra_productos">
-               Conoce algunos de nuestros productos artesanales
-        </h2>
-        
         
 
         <!-- ------------------------- FOOTER ------------------------------ -->
