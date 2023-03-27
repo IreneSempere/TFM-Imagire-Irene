@@ -51,6 +51,9 @@ ul{
     z-index: 2;
     overflow: hidden;
 }
+.avisoCookies a.link_pag{
+	color:#40BBC6;
+}
 #tituloAvisoCookies{
     font-size: 1.3em;
     text-align: center;
@@ -81,6 +84,7 @@ ul{
     background-color: white;
     border-radius: 10px;
     padding:2em 4em 5em 4em;
+    margin:3em 0 3em 0;
 }
 .h2cookies{
     text-align: left;

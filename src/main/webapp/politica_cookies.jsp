@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -5,7 +7,7 @@
         <meta charset="UTF-8">
         <title>Irene Okami</title>
         <link rel="icon" href="img/logoimagire.png" sizes="any"><!-- 32×32 -->
-        <link rel="stylesheet" href="css/estilos.css">
+        <link rel="stylesheet" href="css/css.css">
         <script src="https://kit.fontawesome.com/716997629e.js" crossorigin="anonymous"></script>
         <script src="js/slider_index.js" type="text/javascript"></script>
         <script src="js/formulario.js" type="text/javascript"></script>
@@ -15,55 +17,12 @@
 
     <!-- ------------------------- AVISO COOKIES ------------------------------ -->
 
-    <div class="avisoCookies">
-        <div id="tituloAvisoCookies">
-            <b>AVISO DE COOKIES</b>
-        </div>
-        <div id="infoCookies">
-            Utilizamos cookies propias y de terceros para obtener datos estadísticos de la navegación de nuestros usuarios y mejorar nuestros servicios. 
-            Consulta nuestra <a href="politica_cookies.html" class="link_pag" style="color: #0096c8;">Política de cookies.</a> Si acepta o continúa navegando, consideramos que acepta su uso.
-        </div>
-        <button id="aceptarCookies">
-            ACEPTAR
-        </button>
-    </div>
+    	<%@include file="aviso_cookies.html" %>
 
 <!-- -------------------------  CABECERA Y NAV ------------------------------ -->
 
-    <div id="container">
-         <header>
-            <div class="cabecera">
-                <a href="index.html" class="link_pag"><img src="img/logo.png" title="logo imagire" alt="logo"></a>
-            </div>
-         </header>
-    </div>
+		<%@include file="menu.html" %>
 
-    <nav class="menu">
-        <ul>
-            <a href="index.html" class="link_pag"><div><li><i class="fa-solid fa-house"></i>  Home</li></div></a>
-            <a href="productos.html" class="link_pag"><div><li>Productos</li></div></a>
-            <a href="ofertas.html" class="link_pag"><div><li>Ofertas</li></div></a>
-            <a href="sobre_mi.html" class="link_pag"><div><li>Sobre mí</li></div></a>
-            <a href="contacto.html" class="link_pag"><div><li>Contacto</li></div></a>
-        </ul>
-    </nav> 
- <!-- -------------------------  MENU HAMBURGUESA ------------------------------ -->
-
-     <div class="respmenu">
-        <input type="checkbox">
-        <i class="fas fa-bars"></i>
-        <i class="fas fa-times"></i>
-        <nav>
-          <ul>
-            <a href="index.html" class="link_pag"><div><li><i class="fa-solid fa-house"></i>  Home</li></div></a>
-            <a href="productos.html" class="link_pag" id="fondo_menuA"><div><li>Productos</li></div></a>
-            <a href="ofertas.html" class="link_pag"><div><li>Ofertas</li></div></a>
-            <a href="sobre_mi.html" class="link_pag" id="fondo_menuB"><div><li>Sobre mí</li></div></a>
-            <a href="contacto.html" class="link_pag"><div><li>Contacto</li></div></a>
-          </ul>
-        </nav>
-      </div>
-        
 <!------------------------ CONTENIDO POLITICA DE COOKIES ------------------------------ -->
 
          <div class="contenidoPag">

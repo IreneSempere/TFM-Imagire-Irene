@@ -18,18 +18,7 @@
 
     <!-- ------------------------- AVISO COOKIES ------------------------------ -->
 
-        <div class="avisoCookies">
-            <div id="tituloAvisoCookies">
-                <b>AVISO DE COOKIES</b>
-            </div>
-            <div id="infoCookies">
-                Utilizamos cookies propias y de terceros para obtener datos estadísticos de la navegación de nuestros usuarios y mejorar nuestros servicios. 
-                Consulta nuestra <a href="politica_cookies.html" class="link_pag">Política de cookies.</a> Si acepta o continúa navegando, consideramos que acepta su uso.
-            </div>
-            <button id="aceptarCookies">
-                ACEPTAR
-            </button>
-        </div>
+        <%@include file="aviso_cookies.html" %>
 
     <!-- -------------------------  CABECERA Y NAV --------------------------------- -->
 
@@ -72,15 +61,15 @@
        		<p class="parrafo_info_tienda">¡Bienvenido/a a nuestra pequeña tienda de artesanía!</p>
        		<section class="contenido_info_tienda">
        			<div>
-       				<a href="productos.jsp"><img src="img/diorama.jpg" alt="imagen de un producto artesanal" class="circulos_index"></a>
+       				<a href="ControladorProductosCliente" class="link_pag"><img src="img/diorama.jpg" alt="imagen de un producto artesanal" class="circulos_index"></a>
        				<p class="texto_productos_index">Aquí podrás encontrar diferentes productos<br> en stock de decoración y joyería artesanal</p>
        			</div>
        			<div>
-       				<a href="contacto.jsp"><img src="img/handmade.jpg" alt="imagen de una persona trabajando manualmente" class="circulos_index"></a>
+       				<a href="contacto.jsp" class="link_pag"><img src="img/handmade.jpg" alt="imagen de una persona trabajando manualmente" class="circulos_index"></a>
        				<p class="texto_productos_index">Si prefieres hacernos un pedido personalizado<br> y/o hecho a medida, contacta con nosotros</p>
        			</div>   
        			<div>
-       				<a href="ofertas.jsp"><img src="img/offer.jpg" alt="imagen de un cartel de ofertas" class="circulos_index"></a>
+       				<a href="ControladorOfertas" class="link_pag"><img src="img/offer.jpg" alt="imagen de un cartel de ofertas" class="circulos_index"></a>
        				<p class="texto_productos_index">No olvides que tenemos ofertas por tiempo<br> limitado o hasta fin de stock</p>
        			</div>    			
        		</section>

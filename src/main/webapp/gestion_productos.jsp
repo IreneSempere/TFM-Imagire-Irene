@@ -18,18 +18,7 @@
 
     <!-- ------------------------- AVISO COOKIES ------------------------------ -->
 
-    <div class="avisoCookies">
-        <div id="tituloAvisoCookies">
-            <b>AVISO DE COOKIES</b>
-        </div>
-        <div id="infoCookies">
-            Utilizamos cookies propias y de terceros para obtener datos estadísticos de la navegación de nuestros usuarios y mejorar nuestros servicios. 
-            Consulta nuestra <a href="politica_cookies.html" class="link_pag" style="color: #0096c8;">Política de cookies.</a> Si acepta o continúa navegando, consideramos que acepta su uso.
-        </div>
-        <button id="aceptarCookies">
-            ACEPTAR
-        </button>
-    </div>
+    <%@include file="aviso_cookies.html" %>
 
 <!-- -------------------------  CABECERA Y NAV ------------------------------ -->
 

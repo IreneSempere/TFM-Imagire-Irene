@@ -146,7 +146,12 @@ public class ControladorGestionProductos extends HttpServlet {
 	
 	
 	
-	
+	/**
+	 * Elimina un producto de la base de datos mediante el parámetro IDproducto de la request, obtiene los productos de la base de datos y los envía a la vista
+	 * @param request objeto donde se recoge la petición del cliente
+	 * @param response objeto con el que responderá el servlet al cliente
+	 * @throws Exception si el ID del producto no es un número
+	 */
 	private void eliminarProducto(HttpServletRequest request, HttpServletResponse response) throws Exception{
 		
 		// Leer id del producto a eliminar
@@ -161,7 +166,12 @@ public class ControladorGestionProductos extends HttpServlet {
 
 	
 	
-	
+	/**
+	 * Actualiza la información de un producto en la base de datos, obtiene los productos de la base de datos y los envía a la vista
+	 * @param request objeto donde se recoge la petición del cliente
+	 * @param response objeto con el que responderá el servlet al cliente
+	 * @throws Exception si la información extraída no corresponde con su tipo (int, float etc)
+	 */
 	private void actualizarProducto(HttpServletRequest request, HttpServletResponse response) throws Exception{
 		
 		// Leer los datos que le vienen del formulario de modificar
@@ -188,7 +198,12 @@ public class ControladorGestionProductos extends HttpServlet {
 	
 	
 	
-	
+	/**
+	 * Extrae la información de un producto de la base de datos utilizando el ID del producto y lo envía a la vista de modificación de producto
+	 * @param request objeto donde se recoge la petición del cliente
+	 * @param response objeto con el que responderá el servlet al cliente
+	 * @throws Exception si hay un error al obtener el producto de la base de datos o al llamar a la vista
+	 */
 	private void cargarProductoPorID(HttpServletRequest request, HttpServletResponse response) throws Exception{
 		
 		// Leer el ID del artículo mediante el listado
@@ -208,7 +223,13 @@ public class ControladorGestionProductos extends HttpServlet {
 	
 	
 	
-	
+	/**
+	 * Inserta un nuevo producto en la base de datos, obtiene los productos de la base de datos y los envía a la vista
+	 * @param request objeto donde se recoge la petición del cliente
+	 * @param response objeto con el que responderá el servlet al cliente
+	 * @throws IOException si no se consigue guardar la imagen en el servidor
+	 * @throws ServletException si no se consigue extraer la información de la imagen de la request
+	 */
 	private void insertarProducto(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 		
 		// Leer la información del producto que viene del formulario
@@ -219,11 +240,9 @@ public class ControladorGestionProductos extends HttpServlet {
 		float ofertaProducto=Float.parseFloat(request.getParameter("oferta_producto"));
 		int stockProducto=Integer.parseInt(request.getParameter("stock_producto"));
 		//Guardar imagen en carpeta de servidor
-//		String rutaYnombreImagen = "C:\\Users\\irene\\eclipse-workspace\\TFMservlets\\src\\main\\webapp\\img\\" + nombreProducto + ".png";
 		String rutaCortaImagenParaBBDD = "img/productos/" + nombreProducto + ".jpg";
 		String rutaCompletaImagen= "C:\\Users\\irene\\eclipse-workspace\\TFMservlets\\src\\main\\webapp\\img\\productos\\" + nombreProducto + ".jpg";
 		boolean imagenGuardada = guardarImagenEnServidor(request, rutaCompletaImagen);
-//		String pathImgProducto=request.getParameter("foto_producto");
 		
 		// Crear un objeto de tipo producto
 		Producto nuevoProducto;
@@ -246,9 +265,14 @@ public class ControladorGestionProductos extends HttpServlet {
 	}
 	
 	
-	
-	
-	//Comrpobación y guardado de imagen en servidor
+	/**
+	 * 
+	 * @param request
+	 * @param rutaYnombreImagen
+	 * @return
+	 * @throws IOException
+	 * @throws ServletException
+	 */
 	private boolean guardarImagenEnServidor(HttpServletRequest request, String rutaYnombreImagen)
 			throws IOException, ServletException {
 		
@@ -259,9 +283,6 @@ public class ControladorGestionProductos extends HttpServlet {
             //Comprobamos que el archivo sea tipo imagen y además menor a el tamaño establecido
             if (/*request.getParameter("foto_producto").contains("image") == true
                 &&*/ request.getPart("foto_producto").getSize() < 8388608) { 
-            	
-            	//Obtenemos el nombre de la imagen y la ruta absoluta del sistema donde queremos guardar la imagen
-//                String rutaYnombreImagen = this.getServletContext().getRealPath("C:\\Users\\irene\\eclipse-workspace\\TFMservlets\\src\\main\\webapp\\img" + nombreImagen);
                 
                 //Lanzamos la función guardarImagenDeProductoEnElSistemaDeFicheros creada más abajo para guardar la imagen en la ruta especificada justo arriba
                 ok = guardarImagenDeProductoEnElSistemaDeFicheros(request.getPart("foto_producto").getInputStream(), rutaYnombreImagen);
@@ -273,8 +294,7 @@ public class ControladorGestionProductos extends HttpServlet {
 		return ok;
 	}
 
-	
-	
+
 	
 	//Función para guardar los datos de la imagen obtenida en un archivo dentro de una carpeta del sistema
 	public static boolean guardarImagenDeProductoEnElSistemaDeFicheros(InputStream datosImagen, String rutaYnombreImagen)
@@ -310,6 +330,11 @@ public class ControladorGestionProductos extends HttpServlet {
 	
 	
 	
+	/**
+	 * Obtiene una lista de producto de la base de datos y los manda a la vista. Permite con un parámetro filtrar dichos productos por su tipo
+	 * @param request objeto donde se recoge la petición del cliente
+	 * @param response objeto con el que responderá el servlet al cliente
+	 */
 	private void obtenerProductos(HttpServletRequest request, HttpServletResponse response) {
 		
 		List<Producto> productos;
