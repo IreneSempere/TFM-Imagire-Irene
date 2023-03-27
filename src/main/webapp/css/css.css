@@ -538,7 +538,7 @@ h2{
 }
 
 /********************************************************
-*            * INICIO SESIÓN ADMINISTRADOR *            *
+*            * INICIO SESIÓN *            *
 *********************************************************/
 
 /* ------------------ FORMULARIO ------------------------*/
@@ -548,6 +548,8 @@ section.section_sesion_admin{
 	background-image: url("../img/slider/costa.jpg");
     background-size: 100% auto;
 	width:100%;
+	padding-top: 14em;
+	padding-bottom: 14.5em;
 }
 .formulario_sesion_admin{
     background-color: white;
@@ -564,8 +566,6 @@ form.formulario_sesion_admin{
     width: 280px;
     height:370px;
     margin: auto;
-    margin-top: 7em;
-    margin-bottom: 7em;
     padding:6em;
 }
 ul.form_usuario{
