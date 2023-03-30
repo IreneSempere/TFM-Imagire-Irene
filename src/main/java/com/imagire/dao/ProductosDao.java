@@ -14,21 +14,33 @@ import javax.sql.DataSource;
 
 import com.imagire.vo.Producto;
 
-//Esta clase se utiliza para realizar el CRUD de los productos de la BBDD
+
+/**
+ * Esta clase se utiliza para realizar el CRUD de los productos de la BBDD
+ * @author irene
+ *
+ */
 public class ProductosDao {
 	
-	//extrae del context.xml los datos para poder acceder a la BBDD
+	/**
+	 * Extrae del context.xml los datos para poder acceder a la BBDD
+	 */
 	@Resource(name="jdbc/imagirebd")
 	private DataSource miPool;
 	
 	
-	
+
 	public ProductosDao(DataSource miPool) {
-		
 		this.miPool=miPool;
 	}
 	
-	//Método para obtener los productos de la base de datos
+	
+	/**
+	 * Obtiene de la BBDD productos filtrados por el tipo especificado
+	 * @param filtroTipoProducto tipo de producto por el que se filtra. Si es nulo no filtra
+	 * @return lista con los productos obtenidos
+	 * @throws Exception si hay un error al conectar con la base de datos
+	 */
 	public List<Producto> getProductosByTipoProducto(String filtroTipoProducto) throws Exception{
 		
 		List<Producto> productos=new ArrayList<>();
@@ -37,20 +49,20 @@ public class ProductosDao {
 		Statement miStatement=null;
 		ResultSet miResultset=null;
 		
-		//-----------establecer la conexión--------------
+		//-----------establece la conexión--------------
 		conexionBD=miPool.getConnection();
 				
-		//-----------crear sentencia sql-----------------
+		//-----------crea sentencia sql-----------------
 		String instruccionSql="SELECT * FROM PRODUCTOS";
 		if(filtroTipoProducto != null) {
 			instruccionSql+=" WHERE TIPO_PRODUCTO='" + filtroTipoProducto + "'";
 		}
 		miStatement=conexionBD.createStatement();
 		
-		//----------------ejecutar sql-------------------
+		//----------------ejecuta sql-------------------
 		miResultset=miStatement.executeQuery(instruccionSql);
 
-		//--------recorrer el resultset obtenido para obtener los datos en java---------
+		//--------recorre el resultset obtenido para obtener los datos en java---------
 		while(miResultset.next()) {
 			
 			int id=miResultset.getInt("ID_PRODUCTO");
@@ -72,7 +84,12 @@ public class ProductosDao {
 
 	}
 	
-	//Método para obtener los productos en oferta y por tipo de producto de la base de datos
+	/**
+	 * Obtiene de la BBDD productos en oferta filtrados por el tipo especificado
+	 * @param filtroTipoProducto tipo de producto por el que se filtra. Si es nulo no filtra
+	 * @return lista con los productos en oferta obtenidos
+	 * @throws Exception si hay un error al conectar con la base de datos
+	 */
 	public List<Producto> getProductosEnOfertaByTipoProducto(String filtroTipoProducto) throws Exception{
 		
 		List<Producto> productos=new ArrayList<>();
@@ -117,7 +134,11 @@ public class ProductosDao {
 
 	}
 	
-	//Añadir producto a la BD
+	/**
+	 * Inserta el nuevo producto en la base de datos
+	 * @param nuevoProducto producto a insertar
+	 * @throws SQLException si hay un error al conectar con la base de datos
+	 */
 	public void insertarNuevoProductoEnBBDD(Producto nuevoProducto) throws SQLException {
 		
 		Connection conexionBD=null;
@@ -148,7 +169,12 @@ public class ProductosDao {
 
 	}
 
-	public Producto getProducto(String IDproducto) throws Exception {
+	/**
+	 * Obtiene un producto de la BBDD por ID del producto
+	 * @param IDproducto ID del producto
+	 * @return producto obtenido
+	 */
+	public Producto getProducto(String IDproducto){
 		
 		Producto productoObtenidoDeBD=null;
 				
@@ -173,6 +199,9 @@ public class ProductosDao {
 			// Ejecuta la consulta en la BD con la instrucción y parámetros asignados
 			miResultset=miStatement.executeQuery();
 			
+			// Cierra la conexión con BBDD
+			conexionBD.close(); 
+			
 			// Obtener los datos de respuesta
 			if(miResultset.next()) { //next apunta a los datos de la fila correspondiente al producto buscado
 				
@@ -194,64 +223,80 @@ public class ProductosDao {
 			e.printStackTrace();
 		}
 		
-		conexionBD.close();
-
 		return productoObtenidoDeBD;
 		
 	}
 
-	public void actualizarProducto(Producto productoActualizado) throws Exception {
+	
+	/**
+	 * Actualiza un producto en la BBDD con la nueva información
+	 * @param productoActualizado producto con nueva información
+	 */
+	public void actualizarProducto(Producto productoActualizado){
 		
 		// Establecer conexion con BD
 		
 		Connection conexionBD=null;
 		PreparedStatement miStatement = null;
 		
-		conexionBD=miPool.getConnection();
+		try {
+			conexionBD=miPool.getConnection();
+			
+			// Crear sentencia sql
+			String sql="UPDATE PRODUCTOS SET NOMBRE=?, DESCRIPCION=?, PRECIO=?, PRECIO_OFERTA=?, STOCK=?, TIPO_PRODUCTO=? WHERE ID_PRODUCTO=?";
+			
+			// Crear la consulta preparada
+			miStatement=conexionBD.prepareStatement(sql);
+			
+			// Establecer los parametros
+			miStatement.setString(1, productoActualizado.getNombre());
+			miStatement.setString(2, productoActualizado.getDescripcion());
+			miStatement.setFloat(3, productoActualizado.getPrecio());
+			miStatement.setFloat(4, productoActualizado.getPrecioOferta());
+			miStatement.setInt(5, productoActualizado.getStock());
+			miStatement.setString(6, productoActualizado.getTipoProducto());
+			miStatement.setInt(7, productoActualizado.getId());
+	//		miStatement.setString(7, productoActualizado.getPathImg());
+			
+			// Ejecutar la instruccion sql
+			miStatement.executeUpdate();
 		
-		// Crear sentencia sql
-		String sql="UPDATE PRODUCTOS SET NOMBRE=?, DESCRIPCION=?, PRECIO=?, PRECIO_OFERTA=?, STOCK=?, TIPO_PRODUCTO=? WHERE ID_PRODUCTO=?";
-		
-		// Crear la consulta preparada
-		miStatement=conexionBD.prepareStatement(sql);
-		
-		// Establecer los parametros
-		miStatement.setString(1, productoActualizado.getNombre());
-		miStatement.setString(2, productoActualizado.getDescripcion());
-		miStatement.setFloat(3, productoActualizado.getPrecio());
-		miStatement.setFloat(4, productoActualizado.getPrecioOferta());
-		miStatement.setInt(5, productoActualizado.getStock());
-		miStatement.setString(6, productoActualizado.getTipoProducto());
-		miStatement.setInt(7, productoActualizado.getId());
-//		miStatement.setString(7, productoActualizado.getPathImg());
-		
-		// Ejecutar la instruccion sql
-		miStatement.executeUpdate();
-		
-		conexionBD.close();
+			conexionBD.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 	
-	public void eliminarProducto(int idProducto) throws SQLException {
+	
+	/**
+	 * Elimina un producto de la BBDD en base al ID
+	 * @param idProducto ID del producto a eliminar
+	 */
+	public void eliminarProducto(int idProducto) {
 		
 		Connection conexionBD=null;
 		PreparedStatement miStatement = null;
 		
-		// Establecer conexion con BD
-		conexionBD=miPool.getConnection();
-		
-		// Crear instruccion sql
-		String sql="DELETE FROM PRODUCTOS WHERE ID_PRODUCTO=?";
-		
-		// Preparar la consulta
-		miStatement=conexionBD.prepareStatement(sql);
-		
-		// Establecer parametros
-		miStatement.setInt(1, idProducto);
-
-		// Ejecutar secuencia sql
-		miStatement.execute();
-		
-		conexionBD.close();
+		try {
+			// Establecer conexion con BD
+			conexionBD=miPool.getConnection();
+			
+			// Crear instruccion sql
+			String sql="DELETE FROM PRODUCTOS WHERE ID_PRODUCTO=?";
+			
+			// Preparar la consulta
+			miStatement=conexionBD.prepareStatement(sql);
+			
+			// Establecer parametros
+			miStatement.setInt(1, idProducto);
+	
+			// Ejecutar secuencia sql
+			miStatement.execute();
+			
+			conexionBD.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 	
 

@@ -35,7 +35,10 @@ public class ControladorGestionProductos extends HttpServlet {
 	private DataSource miPool;
 	
 	
-	//Método para arrancar la página
+	/**
+	 * Arranca la página
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
 	@Override
 	public void init() throws ServletException {
 		super.init();
@@ -49,6 +52,7 @@ public class ControladorGestionProductos extends HttpServlet {
 	
 	
 	/**
+	 * Lee el parámetro instruccion y actúa según el tipo de instrucción. Por defecto siempre listará los productos
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
@@ -97,7 +101,10 @@ public class ControladorGestionProductos extends HttpServlet {
 	}
 
 	
-	
+	/**
+	 * Lee el parámetro instruccion y actúa según el tipo de instrucción. Por defecto siempre listará los productos
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
@@ -266,12 +273,12 @@ public class ControladorGestionProductos extends HttpServlet {
 	
 	
 	/**
-	 * 
-	 * @param request
-	 * @param rutaYnombreImagen
-	 * @return
-	 * @throws IOException
-	 * @throws ServletException
+	 * Revisa que la foto del request cumple con los requisitos y la guarda
+	 * @param request objeto donde se recoge la petición del cliente
+	 * @param rutaYnombreImagen ruta y nombre con el que se guarda la imagen en el sistema de archivos
+	 * @return true si la imagen se ha guardado correctamente y false en caso contrario
+	 * @throws IOException si falla la obtención de la foto de la request
+	 * @throws ServletException si falla al guardar la foto
 	 */
 	private boolean guardarImagenEnServidor(HttpServletRequest request, String rutaYnombreImagen)
 			throws IOException, ServletException {
@@ -281,8 +288,7 @@ public class ControladorGestionProductos extends HttpServlet {
 		//obtener imagen de la request
 		if (request.getPart("foto_producto").getSize() > 0) { //getSize es el número de bytes del parametro foto_producto. Será 0 si está vacío
             //Comprobamos que el archivo sea tipo imagen y además menor a el tamaño establecido
-            if (/*request.getParameter("foto_producto").contains("image") == true
-                &&*/ request.getPart("foto_producto").getSize() < 8388608) { 
+            if (request.getPart("foto_producto").getSize() < 8388608) { 
                 
                 //Lanzamos la función guardarImagenDeProductoEnElSistemaDeFicheros creada más abajo para guardar la imagen en la ruta especificada justo arriba
                 ok = guardarImagenDeProductoEnElSistemaDeFicheros(request.getPart("foto_producto").getInputStream(), rutaYnombreImagen);
@@ -296,7 +302,13 @@ public class ControladorGestionProductos extends HttpServlet {
 
 
 	
-	//Función para guardar los datos de la imagen obtenida en un archivo dentro de una carpeta del sistema
+	/**
+	 * Guarda los datos de la imagen obtenida en un archivo dentro de una carpeta del sistema
+	 * @param datosImagen imagen en formato stream
+	 * @param rutaYnombreImagen ruta y nombre con el que se guarda la imagen en el sistema de archivos
+	 * @return true si la imagen se ha guardado correctamente y false en caso contrario
+	 * @throws ServletException si falla al guardar la foto
+	 */
 	public static boolean guardarImagenDeProductoEnElSistemaDeFicheros(InputStream datosImagen, String rutaYnombreImagen)
 	        throws ServletException {
 	    FileOutputStream generarFichero = null;
@@ -310,10 +322,8 @@ public class ControladorGestionProductos extends HttpServlet {
 	        }
 	    } catch (FileNotFoundException e) {
 	    	System.out.println(e.getMessage());
-//	        Logger.getLogger(Tools.class.getName()).log(Level.SEVERE, ex.getMessage());
 	    } catch (IOException e) {
 	    	System.out.println(e.getMessage());
-//	        Logger.getLogger(Tools.class.getName()).log(Level.SEVERE, ex.getMessage());
 	    } finally {
 	        try {
 	            generarFichero.flush();
@@ -322,7 +332,6 @@ public class ControladorGestionProductos extends HttpServlet {
 	            ok = true;
 	        } catch (IOException e) {
 	        	System.out.println("Ha ocurrido un error cerrando ficheros");
-//	            Logger.getLogger(Tools.class.getName()).log(Level.SEVERE, "Error cerrando flujo de salida", ex);
 	        }
 	    }
 	    return ok;
@@ -331,7 +340,7 @@ public class ControladorGestionProductos extends HttpServlet {
 	
 	
 	/**
-	 * Obtiene una lista de producto de la base de datos y los manda a la vista. Permite con un parámetro filtrar dichos productos por su tipo
+	 * Obtiene una lista de producto de la base de datos y los manda a la vista. Permite con el parámetro tipo_producto filtrar dichos productos por su tipo
 	 * @param request objeto donde se recoge la petición del cliente
 	 * @param response objeto con el que responderá el servlet al cliente
 	 */

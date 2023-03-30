@@ -28,7 +28,10 @@ public class ControladorProductosCliente extends HttpServlet {
 	private DataSource miPool;
 	
 	
-	//Método para arrancar la página
+	/**
+	 * Arranca la página
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
 	@Override
 	public void init() throws ServletException {
 		super.init();
@@ -47,7 +50,11 @@ public class ControladorProductosCliente extends HttpServlet {
 		obtenerProductos(request, response);
 	}
 		
-
+	/**
+	 * Obtiene una lista de producto de la base de datos y los manda a la vista. Permite con el parámetro tipo_producto filtrar los productos por su tipo
+	 * @param request objeto donde se recoge la petición del cliente
+	 * @param response objeto con el que responderá el servlet al cliente
+	 */
 	private void obtenerProductos(HttpServletRequest request, HttpServletResponse response) {
 		
 		List<Producto> productos;
