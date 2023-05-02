@@ -246,7 +246,7 @@ a{
 	font-size:18px;
 }
 .foto_mesa{
-	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/productos/mesario.jpg"); /*Añade y oscurece la imagen de fondo del contenedor*/
+	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/productos/mesario.jpg"); /*Añade y oscurece la imagen de fondo del contenedor*/
     text-align:center;
     min-height: 210px;
     background-position: center;
@@ -675,6 +675,12 @@ li{
 .BotonInsertarProducto input:hover{
 	background-color:white;
 	cursor: pointer;
+}
+.tituloProductos{
+	margin-top:6em;
+}
+.contenedor_formulario_gestion{
+	margin-bottom:8em;
 }
 .section_BotonInsertarProducto{
 	padding-top:2em;
