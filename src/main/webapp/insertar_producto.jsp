@@ -18,7 +18,7 @@
 
     <!-- ------------------------- AVISO COOKIES ------------------------------ -->
 
-    	<%@include file="aviso_cookies.html" %>
+<%--     	<%@include file="aviso_cookies.html" %> --%>
 
 	<!-- -------------------------  CABECERA Y NAV ------------------------------ -->
 

@@ -18,7 +18,7 @@
 
     <!-- ------------------------- AVISO COOKIES ------------------------------ -->
 
-    <%@include file="aviso_cookies.html" %>
+<%--     <%@include file="aviso_cookies.html" %> --%>
 
 <!-- -------------------------  CABECERA Y NAV ------------------------------ -->
 
@@ -77,7 +77,7 @@
 					
 					<section class="section_BotonInsertarProducto">
 						<div class="BotonInsertarProducto">
-							<input type="button" value="Añadir producto" onclick="window.location.href='insertar_producto.jsp'"/>
+							<a href="insertar_producto.jsp" class="link_pag"><input type="button" value="Añadir producto"/></a>	
 						</div>
 					</section>		
 						
@@ -104,8 +104,8 @@
 						<c:forEach var="producto" items="${LISTA_PRODUCTOS}">
 						
 							<!-- Link para cada producto con su campo clave -->
-							<c:url var="link_modificarProducto" value="ControladorGestionProductos">
-								<c:param name="instruccion" value="cargarPorID"></c:param>
+							<c:url var="link_modificarProducto" value="ControladorGestionProductos" >
+								<c:param name="instruccion" value="cargarPorID" ></c:param>
 								<c:param name="IDproducto" value="${producto.id}"></c:param>
 							</c:url>
 							
@@ -125,7 +125,7 @@
 		                		<td>${producto.tipoProducto}</td>
 		                		<td>${producto.fecha}</td>
 		                		<td>${producto.pathImg}</td>
-		                		<td class="modificar_producto"><a href="${link_modificarProducto}">Modificar</a></td>
+		                		<td class="modificar_producto"><a href="${link_modificarProducto}" class="link_pag">Modificar</a></td>
 		                		<td><a href="${link_eliminarProducto}"><i class="fa-solid fa-trash"></i></a></td>
 		                	</tr>
 						</c:forEach>

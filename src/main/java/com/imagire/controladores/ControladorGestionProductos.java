@@ -267,6 +267,10 @@ public class ControladorGestionProductos extends HttpServlet {
 			e.printStackTrace();
 		}
 		
+		if(request.getParameter("muestra_cookies") != null && request.getParameter("muestra_cookies").equals("false")) {
+			System.out.println("hola");
+		}
+		
 		// Volver al listado de productos para comprobación
 		obtenerProductos(request, response);
 	}

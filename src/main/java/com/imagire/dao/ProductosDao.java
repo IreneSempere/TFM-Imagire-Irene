@@ -199,8 +199,6 @@ public class ProductosDao {
 			// Ejecuta la consulta en la BD con la instrucción y parámetros asignados
 			miResultset=miStatement.executeQuery();
 			
-			// Cierra la conexión con BBDD
-			conexionBD.close(); 
 			
 			// Obtener los datos de respuesta
 			if(miResultset.next()) { //next apunta a los datos de la fila correspondiente al producto buscado
@@ -221,6 +219,16 @@ public class ProductosDao {
 			}
 		}catch (Exception e) {
 			e.printStackTrace();
+		} finally {
+			// Cierra la conexión con BBDD
+			try {
+				if(conexionBD != null) {
+					conexionBD.close();
+				}
+				
+			} catch (SQLException e) {
+				e.printStackTrace();
+			} 
 		}
 		
 		return productoObtenidoDeBD;
