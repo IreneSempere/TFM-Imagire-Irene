@@ -46,7 +46,24 @@ public class Producto {
 	}
 
 
-	
+	@Override
+	public boolean equals(Object obj) {
+		boolean iguales = false;
+		if(obj instanceof Producto) {
+			Producto otroProducto = (Producto) obj;	//Casteamos, es decir, transformamos el obj tipo Object a un objeto tipo Producto, para poder acceder a los atributos y métodos de la clase Producto
+			iguales = this.id == otroProducto.id
+					&& this.nombre.equals(otroProducto.nombre)
+					&& this.descripcion.equals(otroProducto.descripcion)
+					&& this.precio==otroProducto.precio
+					&& this.precioOferta==otroProducto.precioOferta
+					&& this.stock==otroProducto.stock
+					&& this.tipoProducto.equals(otroProducto.tipoProducto)
+					&& this.pathImg.equals(otroProducto.pathImg)
+					;
+			
+		}
+		return iguales;
+	}
 	
 	
 	@Override

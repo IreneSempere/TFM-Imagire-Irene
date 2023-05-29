@@ -139,7 +139,7 @@ public class ProductosDao {
 	 * @param nuevoProducto producto a insertar
 	 * @throws SQLException si hay un error al conectar con la base de datos
 	 */
-	public void insertarNuevoProductoEnBBDD(Producto nuevoProducto) throws SQLException {
+	public boolean insertarNuevoProductoEnBBDD(Producto nuevoProducto) throws SQLException {
 		
 		Connection conexionBD=null;
 		PreparedStatement preparedStatement = null;
@@ -163,10 +163,10 @@ public class ProductosDao {
 		preparedStatement.setString(7, nuevoProducto.getPathImg());
 
 		//----------------ejecutar sql-------------------
-		preparedStatement.execute();
+		boolean ejecutado = preparedStatement.execute();
 
 		conexionBD.close();
-
+		return ejecutado;
 	}
 
 	/**
@@ -179,7 +179,7 @@ public class ProductosDao {
 		Producto productoObtenidoDeBD=null;
 				
 		Connection conexionBD=null;
-		PreparedStatement miStatement = null;
+		PreparedStatement miStatement=null;
 		ResultSet miResultset=null;
 		
 		try {
@@ -225,7 +225,6 @@ public class ProductosDao {
 				if(conexionBD != null) {
 					conexionBD.close();
 				}
-				
 			} catch (SQLException e) {
 				e.printStackTrace();
 			} 
@@ -240,12 +239,14 @@ public class ProductosDao {
 	 * Actualiza un producto en la BBDD con la nueva información
 	 * @param productoActualizado producto con nueva información
 	 */
-	public void actualizarProducto(Producto productoActualizado){
+	public boolean actualizarProducto(Producto productoActualizado){
 		
 		// Establecer conexion con BD
 		
 		Connection conexionBD=null;
 		PreparedStatement miStatement = null;
+		
+		boolean ejecutado = false;
 		
 		try {
 			conexionBD=miPool.getConnection();
@@ -266,13 +267,18 @@ public class ProductosDao {
 			miStatement.setInt(7, productoActualizado.getId());
 	//		miStatement.setString(7, productoActualizado.getPathImg());
 			
-			// Ejecutar la instruccion sql
-			miStatement.executeUpdate();
-		
+			// si executeUpdate da 0 devuelve false, si no, true
+			if(miStatement.executeUpdate() != 0) {
+				ejecutado = true;
+			}
+			
 			conexionBD.close();
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		
+		return ejecutado;
 	}
 	
 	
@@ -280,10 +286,11 @@ public class ProductosDao {
 	 * Elimina un producto de la BBDD en base al ID
 	 * @param idProducto ID del producto a eliminar
 	 */
-	public void eliminarProducto(int idProducto) {
+	public boolean eliminarProducto(int idProducto) {
 		
 		Connection conexionBD=null;
 		PreparedStatement miStatement = null;
+		boolean ejecutado = false;
 		
 		try {
 			// Establecer conexion con BD
@@ -299,13 +306,17 @@ public class ProductosDao {
 			miStatement.setInt(1, idProducto);
 	
 			// Ejecutar secuencia sql
-			miStatement.execute();
+			ejecutado = miStatement.execute();
 			
 			conexionBD.close();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		
+		return ejecutado;
 	}
+	
+	
 	
 
 

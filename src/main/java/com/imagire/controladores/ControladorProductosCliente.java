@@ -75,6 +75,6 @@ public class ControladorProductosCliente extends HttpServlet {
 					e.printStackTrace();
 				}
 				
-			}
+	}
 
 }
