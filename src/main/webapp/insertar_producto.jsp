@@ -7,7 +7,7 @@
 
     <head>
         <meta charset="UTF-8">
-        <title>Irene Okami</title>
+        <title>Imagire</title>
         <link rel="icon" href="img/logoimagire.png" sizes="any">
         <link rel="stylesheet" href="css/css.css">
         <script src="https://kit.fontawesome.com/716997629e.js"></script>
