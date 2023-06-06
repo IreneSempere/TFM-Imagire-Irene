@@ -137,6 +137,7 @@ public class ProductosDao {
 	/**
 	 * Inserta el nuevo producto en la base de datos
 	 * @param nuevoProducto producto a insertar
+	 * @return true si consigue insertar el producto, false en caso contrario
 	 * @throws SQLException si hay un error al conectar con la base de datos
 	 */
 	public boolean insertarNuevoProductoEnBBDD(Producto nuevoProducto) throws SQLException {
@@ -238,6 +239,7 @@ public class ProductosDao {
 	/**
 	 * Actualiza un producto en la BBDD con la nueva información
 	 * @param productoActualizado producto con nueva información
+	 * @return true si consigue modificar el producto, false en caso contrario
 	 */
 	public boolean actualizarProducto(Producto productoActualizado){
 		
@@ -285,6 +287,7 @@ public class ProductosDao {
 	/**
 	 * Elimina un producto de la BBDD en base al ID
 	 * @param idProducto ID del producto a eliminar
+	 * @return true si consigue eliminar el producto, false en caso contrario
 	 */
 	public boolean eliminarProducto(int idProducto) {
 		
